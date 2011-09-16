@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:composite="http://java.sun.com/jsf/composite">
+    
+    <composite:interface>
+        <composite:attribute name="styleClass" required="false" default=""/>
+        <composite:attribute name="rendered" required="false" default="#{true}"/>
+        <composite:attribute name="json" required="false" default="#{true}"/>
+    </composite:interface>
+
+    <composite:implementation>
+        <h:panelGroup rendered="#{cc.attrs.rendered}">
+            <input type="hidden" class="#{cc.attrs.styleClass}" value="#{cc.attrs.json}"
+                   disabled="disabled" />
+            <!-- TODO sprawdzić, czy na pewno się nie submituje w formularzu -->
+        </h:panelGroup>
+    </composite:implementation>    
+</html>

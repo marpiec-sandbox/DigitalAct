@@ -1,0 +1,21 @@
+<html>
+<body>
+<h3>Witaj ${data.username}, w systemie "Digitalizacja Akt"!</h3>
+
+<div>
+    Aby potwierdzić założenie konta kliknij w link:
+</div>
+<div>
+    <a href="${data.taskConfirmationURL}">${data.taskConfirmationURL}</a>
+</div>
+
+<div>
+    Podany link wygaśnie po upływie 24 godzin.
+</div>
+
+<div>
+Pozdrawiamy!
+</div>
+</body>
+
+</html>

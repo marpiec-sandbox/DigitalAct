@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.digitalact</groupId>
+    <artifactId>EmailEngine</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <name>DigitalAct EmailEngine</name>
+    <url>http://maven.apache.org</url>
+
+    <parent>
+        <artifactId>DigitalAct</artifactId>
+        <groupId>org.digitalact</groupId>
+        <version>0.1-SNAPSHOT</version>
+    </parent>
+    
+    <dependencies>
+       
+        <dependency>
+            <groupId>org.digitalact</groupId>
+            <artifactId>Utils</artifactId>
+            <version>0.1-SNAPSHOT</version>
+        </dependency>
+       <!-- wymagane przez Spring mail -->
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.4</version>
+        </dependency>
+
+    </dependencies>
+</project>

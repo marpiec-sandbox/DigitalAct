@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:hades="http://schemas.synyx.org/hades"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    					http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+    					http://schemas.synyx.org/hades http://schemas.synyx.org/hades/hades.xsd">
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <bean id="entityManagerFactory"
+          class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+                <!--                 <property name="showSql" value="true" /> to bedzie ustawione w logback.xml-->
+                <property name="generateDdl" value="true"/>
+                <property name="databasePlatform" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            </bean>
+        </property>
+        <property name="dataSource" ref="mainDataSource"/>
+        <property name="persistenceUnitName" value="org.digitalact.persistenceUnit"/>
+        <property name="jpaProperties">
+            <!-- hibernate.id.new_generator_mappings rekomendowane przez Hibernate:
+               http://docs.jboss.org/hibernate/core/3.6/reference/en-US/html/session-configuration.html#configuration-optional-dialects -->
+            <value>
+                hibernate.ejb.naming_strategy = org.hibernate.cfg.ImprovedNamingStrategy
+                hibernate.id.new_generator_mappings = true
+                hibernate.hbm2ddl.auto = update
+            </value>
+        </property>
+    </bean>
+
+
+    <bean id="mainDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgresql://localhost:5432/taskkeeper"/>
+        <property name="username" value="taskkeeper"/>
+        <property name="password" value="taskkeeper"/>
+    </bean>
+
+
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory"/>
+    </bean>
+
+</beans>

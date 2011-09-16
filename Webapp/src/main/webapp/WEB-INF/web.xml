@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <display-name>Archetype Created Web Application</display-name>
+    <!-- Lista plików konfiguracyjnych Spring -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            classpath:core-spring.xml
+            classpath:domain-spring.xml
+            classpath:emailengine-spring.xml
+            classpath:emailtask-spring.xml
+            /WEB-INF/spring-beans.xml
+            /WEB-INF/spring-security.xml
+        </param-value>
+    </context-param>
+    <context-param>
+        <param-name>facelets.DEVELOPMENT</param-name>
+        <param-value>true</param-value>
+    </context-param>
+     <context-param>
+            <description>To zeby dzialaly composite components</description>
+            <param-name>com.sun.faces.enableMissingResourceLibraryDetection</param-name>
+            <param-value>true</param-value>
+      </context-param>
+    <context-param>
+            <description>State saving method: 'client' or 'server' (=default). See JSF Specification 2.5.2</description>
+            <param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+            <param-value>server</param-value>
+          </context-param>
+     <context-param>
+            <param-name>javax.faces.FACELETS_SKIP_COMMENTS</param-name>
+            <param-value>true</param-value>
+          </context-param>
+    <!-- Inicjalizacja kontekstu Springa -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <!-- Wymagane, aby beany springowe mogly byc deklarowane jako session scope lub request scope -->
+    <!--listener>
+        <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+    </listener-->
+    <!-- Logowanie spring web i spring security -->
+    <listener>
+        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+    </listener>
+    <!-- Nasłuchuje zdarzenia związane z sesją. m.in. do blokowania dwóch równoległych
+          sesji jednego użytkownika. -->
+    <listener>
+        <listener-class>org.springframework.security.web.session.HttpSessionEventPublisher</listener-class>
+    </listener>
+    <!-- Filtr Spring security -->
+    <filter>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+    <!-- Żeby dane z formularzy były poprawnie obsługiwane w UTF-8 -->
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>
+            org.springframework.web.filter.CharacterEncodingFilter
+        </filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <!-- Każdy request sprawdzamy pod kątem uprawnień dostępu. -->
+    <filter-mapping>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!-- Wszystkie żądania przepuszczamy przez filtr poprawiający kodowanie.
+         Musi być nad postSessionTokenFilter, bo przestaje działać. -->
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <description>Servlet uruchamiający taski potwierdzane przez wysłany do użytkownika email.</description>
+        <servlet-name>mailTaskExecutionServlet</servlet-name>
+        <servlet-class>org.digitalact.emailtask.servlet.MailTaskExecutionServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <description>Servlet zapisujacy zmiany wygladu w notatkach.</description>
+        <servlet-name>saveNotePropertiesServlet</servlet-name>
+        <servlet-class>org.digitalact.notes.SaveNotePropertiesServlet</servlet-class>
+    </servlet>
+
+    
+    <servlet>
+        <servlet-name>LessCSS Servlet</servlet-name>
+        <servlet-class>com.asual.lesscss.LessServlet</servlet-class>
+        <init-param>
+            <param-name>compress</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>cache</param-name>
+            <param-value>false</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.html</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LessCSS Servlet</servlet-name>
+        <url-pattern>/skin/default/*</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>mailTaskExecutionServlet</servlet-name>
+        <url-pattern>/confirm</url-pattern>
+    </servlet-mapping>
+
+        <servlet-mapping>
+        <servlet-name>saveNotePropertiesServlet</servlet-name>
+        <url-pattern>/ajax/save-note</url-pattern>
+    </servlet-mapping>
+
+    
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    
+     <error-page>
+        <error-code>403</error-code>
+        <location>/info/not-found.html</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/info/not-found.html</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/info/technical-problem.html</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/info/technical-problem.html</location>
+    </error-page>
+    
+    <security-constraint>
+        <display-name>Restrict direct access to XHTML files</display-name>
+        <web-resource-collection>
+            <web-resource-name>XHTML files</web-resource-name>
+            <url-pattern>*.xhtml</url-pattern>
+        </web-resource-collection>
+        <auth-constraint/>
+    </security-constraint>
+</web-app>

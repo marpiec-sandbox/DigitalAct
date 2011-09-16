@@ -1,0 +1,21 @@
+package org.digitalact.utils;
+
+import org.apache.commons.lang.RandomStringUtils;
+
+/**
+ * Klasa służąca do obsługi losowych stringów.
+ * @author Marcin Pieciukiewicz
+ */
+public class MyRandomStringUtils {
+    
+    private static final String ALL_ALPHANUMERIC = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890";
+
+    /**
+     * Generuje losowy String alfanumeryczny o podanej długości.
+     * @param length długość stringa do wygernerowania
+     * @return wygenerowany String
+     */
+    public static String generateAlphanumericString(int length) {
+        return RandomStringUtils.random(length, ALL_ALPHANUMERIC);
+    }
+}

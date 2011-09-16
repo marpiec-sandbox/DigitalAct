@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="registration/user-registered.xhtml" x="900" y="300" zoom="true"/>
+        <Node id="registration/register-user.xhtml" x="150" y="600" zoom="true"/>
+        <Node id="mailtask/task-already-executed.xhtml" x="1150" y="150" zoom="true"/>
+        <Node id="registration/create-superuser.xhtml" x="650" y="450" zoom="true"/>
+        <Node id="main.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="registration/confirmation-link-expired.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="login-failed.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="index.html" x="400" y="150" zoom="true"/>
+        <Node id="registration/superuser-created.xhtml" x="400" y="450" zoom="true"/>
+        <Node id="denied.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="index.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="mailtask/incorrect-task-link.xhtml" x="650" y="300" zoom="true"/>
+        <Node id="registration/account-confirmed.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="mailtask/domain-exception.xhtml" x="400" y="600" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

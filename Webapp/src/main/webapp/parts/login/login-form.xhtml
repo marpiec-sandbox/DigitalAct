@@ -1,0 +1,24 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <form action="login" method="post" class="login-form">
+        <div class="username-label">
+            #{label.loginForm_email}:
+        </div>
+        <div class="username-input">
+            <input type="text" name="j_username"></input>
+        </div>
+        <div class="password-label">
+            #{label.loginForm_password}:
+        </div>
+        <div class="password-input">
+            <input type="password" name="j_password"></input>
+        </div>
+        <div class="submit-button">
+            <input type="submit" value="#{label.loginForm_login}"/>
+        </div>
+    </form>
+
+</ui:composition>

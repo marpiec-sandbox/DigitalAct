@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="30 seconds">
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <appender name="APPLICATION_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${catalina.base}/logs/application.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="SECURITY_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${catalina.base}/logs/security.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="PERSISTENCE_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${catalina.base}/logs/persistence.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.springframework.security" level="WARN"><appender-ref ref="SECURITY_FILE"/></logger>
+    <logger name="org.springframework" level="WARN"><appender-ref ref="APPLICATION_FILE"/></logger>
+    <logger name="org.digitalact" level="WARN"><appender-ref ref="APPLICATION_FILE"/></logger>
+    <logger name="org.hibernate" level="WARN" ><appender-ref ref="PERSISTENCE_FILE"/></logger>
+    <logger name="org.hibernate.tool.hbm2ddl" level="WARN" ><appender-ref ref="PERSISTENCE_FILE"/></logger>
+    <logger name="org.synyx.hades" level="WARN" ><appender-ref ref="PERSISTENCE_FILE"/></logger>
+    <logger name="org.hibernate.SQL" level="WARN"><appender-ref ref="PERSISTENCE_FILE"/></logger>
+    <logger name="org.hibernate.transaction" level="DEBUG"><appender-ref ref="PERSISTENCE_FILE"/></logger>
+    <logger name="com.asual.lesscss" level="DEBUG"><appender-ref ref="APPLICATION_FILE"/></logger>
+    <logger name="org.apache.velocity" level="WARN"><appender-ref ref="APPLICATION_FILE"/></logger>
+
+    <root level="debug">
+        <appender-ref ref="APPLICATION_FILE"/>
+    </root>
+</configuration>

@@ -1,0 +1,71 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+
+    <global-method-security pre-post-annotations="enabled"/>
+
+    <http use-expressions="true">
+
+        <intercept-url pattern="/index.html" filters="none" method="GET"/>
+        <intercept-url pattern="/login-failed.html" filters="none" method="GET"/>
+        <intercept-url pattern="/denied.html" filters="none" method="GET"/>
+        <intercept-url pattern="/mailtask/**" filters="none" method="GET"/>
+        <intercept-url pattern="/registration/**" filters="none" method="GET"/>
+        <intercept-url pattern="/confirm" filters="none" method="GET"/>
+
+        <intercept-url pattern="/main.html" access="isAuthenticated()"/>
+
+        <intercept-url pattern="/ajax/save-note" access="isAuthenticated()" method="POST"/>
+
+        <intercept-url pattern="/javax.faces.resource/**" filters="none"/>
+        <intercept-url pattern="/static/**" filters="none"/>
+        <intercept-url pattern="/skin/**" filters="none" method="GET"/>
+        <intercept-url pattern="/js/**" filters="none" method="GET"/>
+        <intercept-url pattern="/css/**" filters="none" method="GET"/>
+        <intercept-url pattern="/resources/**" access="denyAll"/>
+        <intercept-url pattern="/templates/**" access="denyAll"/>
+        <intercept-url pattern="/parts/**" access="denyAll"/>
+        <intercept-url pattern="/**" access="denyAll"/>
+
+        <form-login login-page="/index.html"
+                    authentication-failure-url="/login-failed.html"
+                    login-processing-url="/login"
+                    always-use-default-target="true"
+                    authentication-success-handler-ref="authenticationSuccessHandler"/>
+
+        <logout logout-success-url="/index.html"
+                logout-url="/logout"/>
+    </http>
+
+    <beans:bean id="authenticationSuccessHandler"
+                class="org.digitalact.engine.security.AuthenticationSuccessHandlerImpl">
+        <beans:property name="defaultTargetUrl" value="/main.html"/>
+    </beans:bean>
+
+    <authentication-manager>
+        <authentication-provider>
+            <password-encoder ref="passwordEncoder">
+                <salt-source user-property="username"/>
+            </password-encoder>
+            <jdbc-user-service data-source-ref="mainDataSource"
+                               users-by-username-query="
+        				   	SELECT email, password, enabled
+        				   	FROM person
+        				   	WHERE email = ?"
+                               authorities-by-username-query="
+        				    SELECT email, person_role
+        				    FROM person
+        				    JOIN person_role ON person.person_id = person_role.person_id
+        				    WHERE email = ?"
+                               role-prefix="ROLE_"/>
+        </authentication-provider>
+    </authentication-manager>
+
+    <beans:bean id="passwordEncoder"
+                class="org.springframework.security.authentication.encoding.ShaPasswordEncoder">
+        <beans:constructor-arg value="256"/>
+    </beans:bean>
+
+</beans:beans>
