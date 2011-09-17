@@ -1,21 +1,21 @@
 package org.digitalact.domain.users.command;
 
-import org.digitalact.domain.users.exception.UserAlreadyRegisteredException;
-import java.util.ArrayList;
-import java.util.List;
 import org.digitalact.domain.users.dao.PersonDao;
+import org.digitalact.domain.users.emailtask.ConfirmAccountEmailData;
+import org.digitalact.domain.users.emailtask.ConfirmAccountTask;
 import org.digitalact.domain.users.entity.Person;
 import org.digitalact.domain.users.entity.PersonRole;
+import org.digitalact.domain.users.exception.UserAlreadyActivatedException;
+import org.digitalact.domain.users.exception.UserAlreadyRegisteredException;
+import org.digitalact.emailtask.MailTaskCreator;
+import org.springframework.security.authentication.encoding.PasswordEncoder;
 
 import javax.inject.Inject;
 import javax.inject.Named;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
-import org.digitalact.domain.users.exception.UserAlreadyActivatedException;
-import org.digitalact.domain.users.emailtask.ConfirmAccountEmailData;
-import org.digitalact.emailtask.MailTaskCreator;
-import org.digitalact.domain.users.emailtask.ConfirmAccountTask;
-import org.springframework.security.authentication.encoding.PasswordEncoder;
+import java.util.List;
 
 /**
  * Klasa umożliwiająca rejestrowanie użykowników.
@@ -68,7 +68,7 @@ public class UserRegistrationCommandImpl implements UserRegistrationCommand {
     }
 
     private Person constructSuperuser(String name, String email, String password) {
-        Person person = constructPerson(email, name, password);
+        Person person = constructPerson(name, email, password);
         person.setRoles(Arrays.asList(PersonRole.values()));
         return person;
     }

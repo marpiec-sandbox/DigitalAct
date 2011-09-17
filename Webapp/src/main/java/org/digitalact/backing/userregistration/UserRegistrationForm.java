@@ -1,15 +1,17 @@
 package org.digitalact.backing.userregistration;
 
-import javax.inject.Named;
-import javax.validation.constraints.AssertTrue;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import org.apache.commons.lang.StringUtils;
 import org.digitalact.constants.MyConstants;
 import org.hibernate.validator.constraints.Email;
 import org.springframework.context.annotation.Scope;
 
+import javax.inject.Named;
+import javax.validation.constraints.AssertTrue;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 /**
+ * Formularz zawierający dane użytkownika do zarejestrowania.
  * @author Marcin Pieciukiewicz
  */
 @Named
@@ -60,10 +62,6 @@ public class UserRegistrationForm {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getPasswordRetype() {
-        return passwordRetype;
     }
 
     public void setPasswordRetype(String passwordRetype) {

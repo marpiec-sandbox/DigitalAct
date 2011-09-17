@@ -12,26 +12,26 @@
         </div>
         <div>
             <h:outputText value="Imię i nazwisko: "/>
-            <h:inputText value="#{createSuperuserForm.name}"/>
+            <h:inputText value="#{userRegistrationForm.name}"/>
         </div>
         <div>
             <h:outputText value="Email: "/>
-            <h:inputText value="#{createSuperuserForm.email}"/>
+            <h:inputText value="#{userRegistrationForm.email}"/>
         </div>
         <div>
             <h:outputText value="Nazwa użytkownika (login): "/>
-            <h:inputText value="#{createSuperuserForm.username}"/>
+            <h:inputText value="#{userRegistrationForm.username}"/>
         </div>
         <div>
             <h:outputText value="Hasło: "/>
-            <h:inputText value="#{createSuperuserForm.password}"/>
+            <h:inputText value="#{userRegistrationForm.password}"/>
         </div>
         <div>
             <h:outputText value="Powtórz hasło: "/>
-            <h:inputText value="#{createSuperuserForm.passwordRetype}"/>
+            <h:inputText value="#{userRegistrationForm.passwordRetype}"/>
         </div>
         <div>
-            <h:commandButton action="#{createSuperuserBacking.registerSuperuser}"/>
+            <h:commandButton action="#{userRegistrationBacking.registerSuperuser}"/>
         </div>
     </h:form>
 </ui:composition>

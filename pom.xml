@@ -26,6 +26,11 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.0-801.jdbc4</version>
+        </dependency>
         
         <!-- Application Context (depends on spring-core, spring-expression, spring-aop, 
               spring-beans) This is the central artifact for Spring's Dependency Injection

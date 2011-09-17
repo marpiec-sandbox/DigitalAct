@@ -6,12 +6,7 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
-            classpath:core-spring.xml
-            classpath:domain-spring.xml
-            classpath:emailengine-spring.xml
-            classpath:emailtask-spring.xml
-            /WEB-INF/spring-beans.xml
-            /WEB-INF/spring-security.xml
+            classpath:webapp-spring.xml
         </param-value>
     </context-param>
     <context-param>
