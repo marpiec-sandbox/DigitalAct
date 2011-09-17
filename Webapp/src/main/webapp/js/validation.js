@@ -66,11 +66,7 @@ jQuery(function() {
         jqThis.find(".emailValidator").each(emailValidator);
         jqThis.find(".requiredValidator").each(requiredValidator);
 
-        if (isFormValidatedOK(jqThis)) {
-            return true;
-        } else {
-            return false;
-        }
+        return isFormValidatedOK(jqThis);
     });
 
 

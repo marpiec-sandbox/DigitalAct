@@ -1,16 +1,16 @@
 package org.digitalact.emailtask;
 
-import java.util.Date;
-import javax.inject.Inject;
-import javax.inject.Named;
-
 import org.digitalact.constants.MyConstants;
-import org.digitalact.mail.EmailSender;
 import org.digitalact.emailtask.dao.EmailTaskDao;
 import org.digitalact.emailtask.entity.EmailTask;
+import org.digitalact.mail.EmailSender;
 import org.digitalact.utils.MyDateUtils;
 import org.digitalact.utils.MyJsonSerializer;
 import org.digitalact.utils.MyRandomStringUtils;
+
+import javax.inject.Inject;
+import javax.inject.Named;
+import java.util.Date;
 
 /**
  * Klasa umożliwiająca stworzenie zadania potwierdzanego emailem.
@@ -65,7 +65,7 @@ public class MailTaskCreatorImpl implements MailTaskCreator {
 
     private String generateTaskCode() {
         String taskCode;
-        EmailTask emailTask = null;
+        EmailTask emailTask;
         do {
             taskCode = MyRandomStringUtils.generateAlphanumericString(MyConstants.MailTask.CODE_LENGTH);
             emailTask = emailTaskDao.findByTaskCode(taskCode);

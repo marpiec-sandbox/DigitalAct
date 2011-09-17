@@ -64,8 +64,7 @@ public class MailTaskExecutorImpl implements MailTaskExecutor {
     private Task deserializeToTask(EmailTask emailTask) {
         try {
             Class<?> taskClass = Class.forName(emailTask.getTaskClass());
-            Task task = MyJsonSerializer.deserialize(emailTask.getSerializedTask(), taskClass);
-            return task;
+            return MyJsonSerializer.deserialize(emailTask.getSerializedTask(), taskClass);
         } catch (ClassNotFoundException ex) {
             throw new IllegalStateException("Error getting class named " + emailTask.getTaskClass(), ex);
         }
