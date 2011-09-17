@@ -4,7 +4,7 @@ import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.inject.Named;
 import org.digitalact.domain.users.command.UserRegistrationCommand;
-import org.digitalact.domain.users.exception.UserAlreadyActivated;
+import org.digitalact.domain.users.exception.UserAlreadyActivatedException;
 import org.digitalact.emailtask.MailTaskExecutor;
 import org.digitalact.emailtask.TaskHandler;
 
@@ -20,7 +20,10 @@ public class ConfirmAccountTaskHandler extends TaskHandler<ConfirmAccountTask> {
     
     @Inject
     private UserRegistrationCommand userRegistrationCommand;
-    
+
+    /**
+     * Konstruktor.
+     */
     public ConfirmAccountTaskHandler() {
         super(ConfirmAccountTask.class);
     }
@@ -32,7 +35,7 @@ public class ConfirmAccountTaskHandler extends TaskHandler<ConfirmAccountTask> {
     }
 
     @Override
-    public void handle(ConfirmAccountTask task) throws UserAlreadyActivated {
+    public void handle(ConfirmAccountTask task) throws UserAlreadyActivatedException {
         userRegistrationCommand.activateAccount(task.getPersonId());
     }
     

@@ -10,7 +10,10 @@ import javax.servlet.http.HttpServlet;
  *
  * @author Marcin Pieciukiewicz
  */
-public class MyServletUtils {
+public final class MyServletUtils {
+
+    private MyServletUtils() {
+    }
 
     /**
      * Wywołuje wstrzyknięcie beanów springa do servletu.

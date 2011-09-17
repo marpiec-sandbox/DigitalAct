@@ -8,6 +8,9 @@
     <version>0.1-SNAPSHOT</version>
     <name>DigitalAct Core</name>
     <url>http://maven.apache.org</url>
+    <description>
+        Moduł centralny aplikacji, służący głównie do zdefiniowania encji i konfiguracji wspólnej JPA.
+    </description>
 
     <parent>
         <artifactId>DigitalAct</artifactId>

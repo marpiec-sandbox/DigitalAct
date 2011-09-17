@@ -14,6 +14,6 @@ public interface MailTaskCreator {
      * @param task obiekt zadania
      * @param emailData dane do wysłania emaila
      */
-    public void createTask(String email, Long personId, Task task, TaskEmailData emailData);
+    void createTask(String email, Long personId, Task task, TaskEmailData emailData);
 
 }

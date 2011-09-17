@@ -8,6 +8,9 @@
     <version>0.1-SNAPSHOT</version>
     <name>DigitalAct Domain</name>
     <url>http://maven.apache.org</url>
+    <description>
+        Moduł zawierający domenę, logikę biznesową aplikacji.
+    </description>
 
     <parent>
         <artifactId>DigitalAct</artifactId>

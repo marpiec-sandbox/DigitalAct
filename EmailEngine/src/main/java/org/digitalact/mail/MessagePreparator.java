@@ -2,6 +2,7 @@ package org.digitalact.mail;
 
 import java.util.HashMap;
 import java.util.Map;
+import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import org.apache.velocity.app.VelocityEngine;
 import org.digitalact.constants.MyConstants;
@@ -21,6 +22,12 @@ class MessagePreparator implements MimeMessagePreparator {
     private EmailData emailData;
     private VelocityEngine velocityEngine;
 
+    /**
+     * Konstruktor.
+     * @param emailAddress adres email na który ma być wysłany mail
+     * @param emailData dane do zawarcia w emailu
+     * @param velocityEngine silnik do velocity
+     */
     public MessagePreparator(String emailAddress, EmailData emailData, VelocityEngine velocityEngine) {
         this.emailAddress = emailAddress;
         this.emailData = emailData;
@@ -28,7 +35,7 @@ class MessagePreparator implements MimeMessagePreparator {
     }
     
     @Override
-    public void prepare(MimeMessage mimeMessage) throws Exception {
+    public void prepare(MimeMessage mimeMessage) throws MessagingException {
         MimeMessageHelper message = new MimeMessageHelper(mimeMessage);
         message.setTo(emailAddress);
         message.setFrom(MyConstants.SYSTEM_EMAIL_SENDER_ADDRESS);

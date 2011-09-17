@@ -6,9 +6,12 @@ import org.apache.commons.lang.RandomStringUtils;
  * Klasa służąca do obsługi losowych stringów.
  * @author Marcin Pieciukiewicz
  */
-public class MyRandomStringUtils {
+public final class MyRandomStringUtils {
     
     private static final String ALL_ALPHANUMERIC = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890";
+
+    private MyRandomStringUtils() {
+    }
 
     /**
      * Generuje losowy String alfanumeryczny o podanej długości.

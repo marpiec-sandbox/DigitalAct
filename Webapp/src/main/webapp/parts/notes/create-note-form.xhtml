@@ -6,14 +6,14 @@
 
     <h:form>
         <h:commandButton action="#{notesBacking.createNewNote}" value="#{label.notes_addNote}">
-            <f:ajax render="createdNote" onevent="notes_handleAjaxCreateNote" />
+            <f:ajax render="createdNote" onevent="notes_handleAjaxCreateNote"/>
         </h:commandButton>
 
         <h:panelGroup id="createdNote">
             <my:hiddenHTML elementRendered="#{not empty notesBacking.lastCreatedNote}"
                            styleClass="createdNoteContainer">
                 <ui:include src="/parts/notes/note.xhtml">
-                     <ui:param name="note" value="#{notesBacking.lastCreatedNote}" />
+                    <ui:param name="note" value="#{notesBacking.lastCreatedNote}"/>
                 </ui:include>
             </my:hiddenHTML>
         </h:panelGroup>

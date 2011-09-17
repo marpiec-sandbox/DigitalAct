@@ -8,6 +8,10 @@
     <version>0.1-SNAPSHOT</version>
     <name>DigitalAct EmailTask</name>
     <url>http://maven.apache.org</url>
+    <description>
+        Moduł dodający obsługę zadań potwierdzanych mailem.
+        Np. potwierdzanie adresu email po rejestracji konta.
+    </description>
 
     <parent>
         <artifactId>DigitalAct</artifactId>

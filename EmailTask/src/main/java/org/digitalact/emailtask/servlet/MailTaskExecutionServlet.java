@@ -38,20 +38,24 @@ public class MailTaskExecutionServlet extends HttpServlet {
         String taskCode = request.getParameter(MyConstants.MailTask.TASK_CODE_PARAMETER_NAME);
 
         if (StringUtils.isNotBlank(taskCode)) {
-            try {
-                String successLink = mailTaskExecutor.executeTask(taskCode);
-                redirectToSuccessfulExecutionPage(response, successLink);
-            } catch (TaskExpiredException ex) {
-                redirectToTaskExpiredPage(response, ex.getTaskExpiredLink());
-            } catch (TaskAlreadyExecutedException ex) {
-                redirectToTaskAlreadyExecuted(response);
-            } catch (IncorrectTaskCodeException ex) {
-                redirectToIncorrectTaskCodePage(response);
-            } catch (DomainException ex) {
-                redirectAfterDomainException(response, ex);
-            }
+            executeTask(response, taskCode);
         } else {
             redirectToIncorrectTaskCodePage(response);
+        }
+    }
+
+    private void executeTask(HttpServletResponse response, String taskCode) throws IOException {
+        try {
+            String successLink = mailTaskExecutor.executeTask(taskCode);
+            redirectToSuccessfulExecutionPage(response, successLink);
+        } catch (TaskExpiredException ex) {
+            redirectToTaskExpiredPage(response, ex.getTaskExpiredLink());
+        } catch (TaskAlreadyExecutedException ex) {
+            redirectToTaskAlreadyExecuted(response);
+        } catch (IncorrectTaskCodeException ex) {
+            redirectToIncorrectTaskCodePage(response);
+        } catch (DomainException ex) {
+            redirectAfterDomainException(response, ex);
         }
     }
 

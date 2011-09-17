@@ -3,6 +3,8 @@ package org.digitalact.emailtask;
 import java.util.Date;
 import javax.inject.Inject;
 import javax.inject.Named;
+
+import org.digitalact.constants.MyConstants;
 import org.digitalact.mail.EmailSender;
 import org.digitalact.emailtask.dao.EmailTaskDao;
 import org.digitalact.emailtask.entity.EmailTask;
@@ -65,7 +67,7 @@ public class MailTaskCreatorImpl implements MailTaskCreator {
         String taskCode;
         EmailTask emailTask = null;
         do {
-            taskCode = MyRandomStringUtils.generateAlphanumericString(64);
+            taskCode = MyRandomStringUtils.generateAlphanumericString(MyConstants.MailTask.CODE_LENGTH);
             emailTask = emailTaskDao.findByTaskCode(taskCode);
         } while (emailTask!=null);
         return taskCode;

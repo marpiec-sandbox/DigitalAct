@@ -15,6 +15,11 @@ import java.io.IOException;
 import javax.inject.Named;
 import org.digitalact.domain.users.query.UserQuery;
 
+/**
+ * Klasa dokonująca inicjalizacji sesji użytkownika po prawidłowej autentykacji.
+ * M.in. umieszcza obiekt z danymi użytkownika w sesji.
+ * @author Marcin Pieciukiewicz
+ */
 @Named
 public class AuthenticationSuccessHandlerImpl extends SimpleUrlAuthenticationSuccessHandler {
 

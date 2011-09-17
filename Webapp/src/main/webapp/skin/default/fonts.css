@@ -1,8 +1,11 @@
 .defaultFont {
-    font-family: Helvetica,Arial;
+    font-family: Helvetica, Arial;
     font-size: 14px;
 }
 
 body {
-    .defaultFont;
-}
+
+.defaultFont
+
+;
+    }

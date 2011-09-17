@@ -10,11 +10,11 @@
                                         http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
 
 
-    <context:component-scan base-package="org.digitalact.*" />
+    <context:component-scan base-package="org.digitalact.*"/>
     <context:annotation-config/>
     <context:spring-configured/>
-    
-    <task:annotation-driven executor="myExecutor" />
+
+    <task:annotation-driven executor="myExecutor"/>
     <task:executor id="myExecutor" pool-size="5"/>
 
     <!-- View Scope support -->
@@ -27,7 +27,6 @@
             </map>
         </property>
     </bean>
-
 
 
 </beans>

@@ -6,16 +6,21 @@ package org.digitalact.emailtask;
  */
 public abstract class Task {
     
-    private String exiredLink;
+    private String expiredLink;
     private String successLink;
 
-    public Task(String exiredLink, String successLink) {
-        this.exiredLink = exiredLink;
+    /**
+     * Konstruktor.
+     * @param expiredLink link do strony oznaczającej wygaśnięcie zadania
+     * @param successLink link do strony potwierdzającej wykonanie zadania
+     */
+    public Task(String expiredLink, String successLink) {
+        this.expiredLink = expiredLink;
         this.successLink = successLink;
     }
 
-    public String getExiredLink() {
-        return exiredLink;
+    public String getExpiredLink() {
+        return expiredLink;
     }
 
     public String getSuccessLink() {

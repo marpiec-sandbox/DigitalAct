@@ -11,6 +11,7 @@ import org.digitalact.engine.validation.BeanValidator;
 import org.springframework.context.annotation.Scope;
 
 /**
+ * Backing bean odpowiedzialny za rejestrację superużytkownika.
  * @author Marcin Pieciukiewicz
  */
 @Named
@@ -29,6 +30,10 @@ public class CreateSuperuserBacking {
     @Inject
     private UserRegistrationCommand userRegistrationCommand;
 
+    /**
+     * Wykonuje rejestrację superużytkownika.
+     * @return redirect do odpowiedniej strony lub null w przypadku bledu walidacji
+     */
     public String registerSuperuser() {
         if (beanValidator.validateWithMessages(form)) {
             try {

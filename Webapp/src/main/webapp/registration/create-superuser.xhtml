@@ -3,35 +3,35 @@
                 xmlns:f="http://java.sun.com/jsf/core"
                 xmlns:h="http://java.sun.com/jsf/html"
                 xmlns:ui="http://java.sun.com/jsf/facelets">
-    
-    <ui:param name="pageTitle" value="Strona główna" />
-<h:form>
 
-    <div>
-        <h:messages />
-    </div>
-    <div>        
-        <h:outputText value="Imię i nazwisko: "/>
-        <h:inputText value="#{createSuperuserForm.name}"/>
-    </div>
-    <div>        
-        <h:outputText value="Email: "/>
-        <h:inputText value="#{createSuperuserForm.email}"/>
-    </div>
-    <div>        
-        <h:outputText value="Nazwa użytkownika (login): "/>
-        <h:inputText value="#{createSuperuserForm.username}"/>
-    </div>
-    <div>        
-        <h:outputText value="Hasło: "/>
-        <h:inputText value="#{createSuperuserForm.password}"/>
-    </div>
-    <div>        
-        <h:outputText value="Powtórz hasło: "/>
-        <h:inputText value="#{createSuperuserForm.passwordRetype}"/>
-    </div>
-    <div>        
-        <h:commandButton action="#{createSuperuserBacking.registerSuperuser}"/>
-    </div>
-</h:form>
+    <ui:param name="pageTitle" value="Strona główna"/>
+    <h:form>
+
+        <div>
+            <h:messages/>
+        </div>
+        <div>
+            <h:outputText value="Imię i nazwisko: "/>
+            <h:inputText value="#{createSuperuserForm.name}"/>
+        </div>
+        <div>
+            <h:outputText value="Email: "/>
+            <h:inputText value="#{createSuperuserForm.email}"/>
+        </div>
+        <div>
+            <h:outputText value="Nazwa użytkownika (login): "/>
+            <h:inputText value="#{createSuperuserForm.username}"/>
+        </div>
+        <div>
+            <h:outputText value="Hasło: "/>
+            <h:inputText value="#{createSuperuserForm.password}"/>
+        </div>
+        <div>
+            <h:outputText value="Powtórz hasło: "/>
+            <h:inputText value="#{createSuperuserForm.passwordRetype}"/>
+        </div>
+        <div>
+            <h:commandButton action="#{createSuperuserBacking.registerSuperuser}"/>
+        </div>
+    </h:form>
 </ui:composition>

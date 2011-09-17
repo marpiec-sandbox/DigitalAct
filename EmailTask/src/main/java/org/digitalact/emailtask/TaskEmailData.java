@@ -18,6 +18,10 @@ public abstract class TaskEmailData extends EmailData {
     
     private String taskCode;
 
+    /**
+     * Konstruktor.
+     * @param template template emaila do którego dane zawiera ten obiekt.
+     */
     public TaskEmailData(EmailTemplate template) {
         super(template);
     }
@@ -26,6 +30,10 @@ public abstract class TaskEmailData extends EmailData {
         return taskCode;
     }
 
+    /**
+     * Ustawia kod zadania i wyznacza url odpowiedzialny za jego potwierdzenie.
+     * @param taskCode kod zadania
+     */
     public void setTaskCode(String taskCode) {
         this.taskCode = taskCode;
         taskConfirmationURL = MyConstants.MailTask.EXECUTION_URL + taskCode;

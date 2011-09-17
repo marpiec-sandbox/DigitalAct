@@ -3,14 +3,15 @@
                 xmlns:h="http://java.sun.com/jsf/html"
                 xmlns:ui="http://java.sun.com/jsf/facelets"
                 xmlns:my="http://java.sun.com/jsf/composite/my">
-    
+
     <div class="stickyNote">
-        <my:hiddenJson styleClass="id" json="#{note.stickyNoteId}" />
-        <my:hiddenJson styleClass="data" json="#{jsonUtils.toJson(note.visualProperties)}" />
+        <my:hiddenJson styleClass="id" json="#{note.stickyNoteId}"/>
+        <my:hiddenJson styleClass="data" json="#{jsonUtils.toJson(note.visualProperties)}"/>
+
         <div class="text">#{note.text}</div>
-        <div class="editor hiddenByDefault" >
+        <div class="editor hiddenByDefault">
             <textarea rows="2" cols="20">#{note.text}</textarea>
         </div>
     </div>
-    
+
 </ui:composition>

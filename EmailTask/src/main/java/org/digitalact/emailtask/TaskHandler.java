@@ -14,6 +14,10 @@ public abstract class TaskHandler<T extends Task> {
     
     private Class<? extends T> taskClass;
 
+    /**
+     * Konstruktor.
+     * @param taskClass klasa zadania, którą będzie obsługiwał handler
+     */
     public TaskHandler(Class<? extends T> taskClass) {
         this.taskClass = taskClass;
     }
@@ -22,8 +26,16 @@ public abstract class TaskHandler<T extends Task> {
         return taskClass;
     }
 
-    abstract public void registerHandler();
-    
+    /**
+     *  Metoda rejestrująca handler w executorze.
+     */
+    public abstract void registerHandler();
+
+    /**
+     * Metoda odpowiedzialna za obsługę zadania.
+     * @param task zadanie do wykonania
+     * @throws DomainException w przypadku błędów domeny
+     */
     public abstract void handle(T task) throws DomainException;
     
 }

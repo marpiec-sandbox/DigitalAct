@@ -12,5 +12,5 @@ public interface EmailSender {
      * @param emailAddress adres email
      * @param mailData dane określające zawartość emaila
      */
-    public void sendEmail(String emailAddress, EmailData mailData);
+    void sendEmail(String emailAddress, EmailData mailData);
 }

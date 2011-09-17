@@ -7,7 +7,6 @@ package org.digitalact.constants;
 public final class MyConstants {
 
     private MyConstants() {
-        //empty
     }
 
     public static final String APPLICATION_URL = "http://localhost:8080/digitalact/";
@@ -20,6 +19,11 @@ public final class MyConstants {
      * Ograniczenia zakładane na encje.
      */
     public static final class Constrains {
+
+        private Constrains() {
+        }
+
+        public static final int MIN_DEFAULT_STRING_INPUT = 3;
         public static final int MAX_PASSWORD_LENGTH = 64;
         public static final int MAX_FULL_CLASS_NAME = 128;
 
@@ -29,6 +33,10 @@ public final class MyConstants {
      * Stałe odnoszące się do zadań potwierdzanych emailem.
      */
     public static final class MailTask {
+
+        private MailTask() {
+        }
+
         public static final int CODE_LENGTH = 64;
         public static final int SERIALIZED_TASK_SIZE = 10240;
         public static final String TASK_CODE_PARAMETER_NAME = "k";

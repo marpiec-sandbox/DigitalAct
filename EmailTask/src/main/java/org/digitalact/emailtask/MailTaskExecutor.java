@@ -20,7 +20,7 @@ public interface MailTaskExecutor {
      * Metoda umożliwiająca zarejestrowanie klasy odpowiedzialnej za obsługę konkretnego zadania.
      * @param handler klasa obsługująca zadanie
      */
-    public void registerHandler(TaskHandler handler);
+    void registerHandler(TaskHandler handler);
 
     /**
      * Metoda wykonuje zadanie o podanym kodzie.
@@ -31,7 +31,7 @@ public interface MailTaskExecutor {
      * @throws IncorrectTaskCodeException gdy podany kod zadania jest niepoprawny
      * @throws DomainException gdy zgłoszony został wyjątek podczas wykonanywania zadania
      */
-    public String executeTask(String taskCode) throws TaskExpiredException, TaskAlreadyExecutedException, IncorrectTaskCodeException,
+    String executeTask(String taskCode) throws TaskExpiredException, TaskAlreadyExecutedException, IncorrectTaskCodeException,
     DomainException;
 
 }

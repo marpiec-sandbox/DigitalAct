@@ -48,7 +48,7 @@ public class MailTaskExecutorImpl implements MailTaskExecutor {
 
         if (taskExpired(emailTask))
         {
-            throw new TaskExpiredException(task.getExiredLink());
+            throw new TaskExpiredException(task.getExpiredLink());
         }
         
         Date executionTime = new Date();
@@ -61,7 +61,7 @@ public class MailTaskExecutorImpl implements MailTaskExecutor {
         return task.getSuccessLink();
     }
 
-    private Task deserializeToTask(EmailTask emailTask) throws IllegalStateException {
+    private Task deserializeToTask(EmailTask emailTask) {
         try {
             Class<?> taskClass = Class.forName(emailTask.getTaskClass());
             Task task = MyJsonSerializer.deserialize(emailTask.getSerializedTask(), taskClass);

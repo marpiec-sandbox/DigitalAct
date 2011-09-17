@@ -6,9 +6,12 @@ import java.util.Date;
  * Klasa dostarczająca narzędzi do obsługi dat.
  * @author Marcin Pieciukiewicz
  */
-public class MyDateUtils {
+public final class MyDateUtils {
 
     private static final int MILLS_IN_24H = 86400000;
+
+    private MyDateUtils() {
+    }
 
     //TODO: zamienić na obsługe JodaTime
 

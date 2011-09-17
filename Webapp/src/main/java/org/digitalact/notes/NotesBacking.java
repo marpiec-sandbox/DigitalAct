@@ -13,7 +13,7 @@ import org.digitalact.engine.session.SessionParams;
 import org.springframework.context.annotation.Scope;
 
 /**
- *
+ * Backing bean odpoiwiedzialny za obsługę notatek.
  * @author Marcin Pieciukiewicz
  */
 @Named
@@ -30,7 +30,10 @@ public class NotesBacking implements Serializable {
     private List<StickyNote> notes;
     
     private StickyNote lastCreatedNote;
-    
+
+    /**
+     * Inicjalizacja beana.
+     */
     @PostConstruct
     public void init() {
         loadNotesForCurrentUser();
@@ -40,9 +43,11 @@ public class NotesBacking implements Serializable {
         Person person = SessionParams.getPerson();
         notes = stickyNoteQuery.findStickyNotesForPerson(person);
     }
-    
+
+    /**
+     * Tworzy nową, pustą notatkę.
+     */
     public void createNewNote() {
-        //TODO dodac walidacje
         Person person = SessionParams.getPerson();
         long newStickyNoteId = stickyNoteCommand.createEmptyStickyNote(person.getPersonId());
         loadLastCreatedNote(newStickyNoteId);

@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package org.digitalact.spring;
 
 import java.util.Map;
@@ -12,7 +8,8 @@ import org.springframework.beans.factory.config.Scope;
 
 /**
  * Implementacja scope View dla Beanow obslugiwanych przez Spring.
- * @author mpieciukiewicz
+ * Dzięki temu można wykorzystać View scope w przypadku beanów Ajaxowych.
+ * @author Marcin Pieciukiewicz
  */
 public class ViewScope implements Scope {
 

@@ -7,6 +7,9 @@
     <packaging>war</packaging>
     <version>0.1-SNAPSHOT</version>
     <name>DigitalAct Webapp</name>
+    <description>
+        Aplikacja webowa.
+    </description>
 
     <parent>
         <groupId>org.digitalact</groupId>

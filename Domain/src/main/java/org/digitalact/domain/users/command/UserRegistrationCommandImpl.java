@@ -11,7 +11,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import java.util.Arrays;
 import java.util.Date;
-import org.digitalact.domain.users.exception.UserAlreadyActivated;
+import org.digitalact.domain.users.exception.UserAlreadyActivatedException;
 import org.digitalact.domain.users.emailtask.ConfirmAccountEmailData;
 import org.digitalact.emailtask.MailTaskCreator;
 import org.digitalact.domain.users.emailtask.ConfirmAccountTask;
@@ -106,12 +106,12 @@ public class UserRegistrationCommandImpl implements UserRegistrationCommand {
     }
 
     @Override
-    public void activateAccount(long personId) throws UserAlreadyActivated {
+    public void activateAccount(long personId) throws UserAlreadyActivatedException {
         Person person = personDao.readByPrimaryKey(personId);
         
         Date currentActivationTime = person.getActivationTime();
         if(currentActivationTime!=null) {
-            throw new UserAlreadyActivated(currentActivationTime);
+            throw new UserAlreadyActivatedException(currentActivationTime);
         }
         
         person.setActivationTime(new Date());

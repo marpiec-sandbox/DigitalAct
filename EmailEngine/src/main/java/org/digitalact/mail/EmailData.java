@@ -9,6 +9,10 @@ public abstract class EmailData {
 
     private EmailTemplate template;
 
+    /**
+     * Konstruktor.
+     * @param template szablon wiadomości email
+     */
     public EmailData(EmailTemplate template) {
         this.template = template;
     }

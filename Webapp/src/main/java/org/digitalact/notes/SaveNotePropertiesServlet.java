@@ -16,19 +16,16 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * Created by IntelliJ IDEA.
- * User: Marcin
- * Date: 02.09.11
- * Time: 23:22
- * To change this template use File | Settings | File Templates.
+ * Servlet odpowiedzialny za zapisywanie zmian w notatce.
+ * Przyjmuje reqest typu POST zawierający m.in. dane notatki w postaci JSON.
  */
 public class SaveNotePropertiesServlet extends HttpServlet {
 
-     @Inject
-     private StickyNoteCommand stickyNoteCommand;
+    @Inject
+    private StickyNoteCommand stickyNoteCommand;
 
-     @Override
-     public void init(ServletConfig config) throws ServletException {
+    @Override
+    public void init(ServletConfig config) throws ServletException {
         super.init(config);
         MyServletUtils.applyBeanInjection(this, config.getServletContext());
     }
@@ -40,7 +37,7 @@ public class SaveNotePropertiesServlet extends HttpServlet {
         String dataJson = request.getParameter("data");
         Long id;
         SaveNoteData data;
-        if(StringUtils.isBlank(idString) || StringUtils.isBlank(dataJson)) {
+        if (StringUtils.isBlank(idString) || StringUtils.isBlank(dataJson)) {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             return;
         }

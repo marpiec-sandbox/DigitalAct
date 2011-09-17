@@ -11,6 +11,7 @@ import org.digitalact.engine.params.Pages;
 import org.springframework.context.annotation.Scope;
 
 /**
+ * Backing bean odpowiedzialny za rejestrację nowych użytkowników.
  * @author Marcin Pieciukiewicz
  */
 @Named
@@ -28,7 +29,11 @@ public class UserRegistrationBacking {
 
     @Inject
     private MessagesUtils messagesUtils;
-    
+
+    /**
+     * Wykonuje rejestrację użytkownika.
+     * @return redirect do odpowiedniej strony lub null w przypadku bledu walidacji
+     */
     public String registerUser() {
         if (beanValidator.validateWithMessages(form)) {
             try {

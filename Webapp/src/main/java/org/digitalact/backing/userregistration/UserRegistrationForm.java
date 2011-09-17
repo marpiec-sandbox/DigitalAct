@@ -5,6 +5,7 @@ import javax.validation.constraints.AssertTrue;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.apache.commons.lang.StringUtils;
+import org.digitalact.constants.MyConstants;
 import org.hibernate.validator.constraints.Email;
 import org.springframework.context.annotation.Scope;
 
@@ -16,18 +17,22 @@ import org.springframework.context.annotation.Scope;
 public class UserRegistrationForm {
 
     @NotNull
-    @Size(min=3)
+    @Size(min= MyConstants.Constrains.MIN_DEFAULT_STRING_INPUT)
     private String name;
     @NotNull
     @Email
     private String email;
     @NotNull
-    @Size(min=3)
+    @Size(min=MyConstants.Constrains.MIN_DEFAULT_STRING_INPUT)
     private String password;
     @NotNull
-    @Size(min=3)
+    @Size(min=MyConstants.Constrains.MIN_DEFAULT_STRING_INPUT)
     private String passwordRetype;
 
+    /**
+     * Weryfikuje czy wprowadzone hasła są takie same.
+     * @return true jeżeli są takie same
+     */
     @AssertTrue(message="Podane hasła nie są równe.")
     public boolean isPasswordsEquals() {
         return StringUtils.equals(password, passwordRetype);

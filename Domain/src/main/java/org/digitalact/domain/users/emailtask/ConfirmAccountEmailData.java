@@ -11,6 +11,9 @@ public class ConfirmAccountEmailData extends TaskEmailData {
 
     private String username;
 
+    /**
+     * Konstruktor.
+     */
     public ConfirmAccountEmailData() {
         super(EmailTemplate.CONFIRM_ACCOUNT);
     }

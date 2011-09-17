@@ -14,6 +14,10 @@ public class ConfirmAccountTask extends Task {
 
     private long personId;
 
+    /**
+     * Konstruktor.
+     * @param personId id konta do potwierdzenia
+     */
     public ConfirmAccountTask(long personId) {
         super(EXPIRED_LINK, SUCCESS_LINK);
         this.personId = personId;

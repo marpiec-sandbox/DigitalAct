@@ -8,6 +8,9 @@
     <version>0.1-SNAPSHOT</version>
     <name>DigitalAct Utils</name>
     <url>http://maven.apache.org</url>
+    <description>
+        Moduł zawierający klasy narzędziowe.
+    </description>
 
     <parent>
         <artifactId>DigitalAct</artifactId>

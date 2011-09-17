@@ -1,6 +1,6 @@
 package org.digitalact.domain.users.command;
 
-import org.digitalact.domain.users.exception.UserAlreadyActivated;
+import org.digitalact.domain.users.exception.UserAlreadyActivatedException;
 import org.digitalact.domain.users.exception.UserAlreadyRegisteredException;
 
 /**
@@ -32,7 +32,7 @@ public interface UserRegistrationCommand {
     /**
      * Dokonuje aktywacji konta użytkownika.
      * @param personId id osoby
-     * @throws UserAlreadyActivated w przypadku, gdy konto użytkownika jest już zarejestrowane.
+     * @throws org.digitalact.domain.users.exception.UserAlreadyActivatedException w przypadku, gdy konto użytkownika jest już zarejestrowane.
      */
-    public void activateAccount(long personId) throws UserAlreadyActivated;
+    void activateAccount(long personId) throws UserAlreadyActivatedException;
 }

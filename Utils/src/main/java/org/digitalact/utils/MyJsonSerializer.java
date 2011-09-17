@@ -11,7 +11,10 @@ import com.google.gson.GsonBuilder;
  * Klasa ułatwiająca obsługę JSON oraz separująca wykorzystaną bibliotekę.
  * @author Marcin Pieciukiewicz
  */
-public class MyJsonSerializer {
+public final class MyJsonSerializer {
+
+    private MyJsonSerializer() {
+    }
 
     //TODO postarac sie nie tworzyc obiektu gson za kazdym razem
 

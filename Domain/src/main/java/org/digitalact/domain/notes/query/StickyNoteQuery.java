@@ -15,12 +15,12 @@ public interface StickyNoteQuery {
      * @param person Osoba dla której maja zostac wyszukane notatki
      * @return Lista notatek
      */
-    public List<StickyNote> findStickyNotesForPerson(Person person);
+    List<StickyNote> findStickyNotesForPerson(Person person);
 
     /**
      * Znajduje notatkę.
      * @param stickyNoteId Id notatki do znalezienia
      * @return znaleznina notatka
      */
-    public StickyNote findById(long stickyNoteId);
+    StickyNote findById(long stickyNoteId);
 }

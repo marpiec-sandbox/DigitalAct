@@ -11,14 +11,14 @@ notes_const.SAVE_NOTE_SERVICE = "ajax/save-note";
 function notes_initNotes() {
     var jqNotesContainer = jQuery(notes_const.NOTES_CONTAINER_SELECTOR);
     var jqNotes = jqNotesContainer.find(notes_const.NOTE_SELECTOR);
-    
+
     jqNotes.each(function() {
         notes_initNote(jQuery(this));
     });
 }
 
 function notes_initNote(jqNote) {
-    
+
     var data = jsonToObject(jqNote.find(notes_const.DATA_SELECTOR).val());
     jqNote.css({
         top:data.top,
@@ -27,17 +27,17 @@ function notes_initNote(jqNote) {
         height:data.height
     });
 
-    jQuery(function(){
-          jqNote.resizable({
-              handles: 'n, e, s, w, ne, nw, se, sw',
-              start: notes_moveNoteOnTop,
-              stop: saveNoteAfterMove
-          }).draggable({
-              start: notes_moveNoteOnTop,
-              stop: saveNoteAfterMove
-          });
+    jQuery(function() {
+        jqNote.resizable({
+            handles: 'n, e, s, w, ne, nw, se, sw',
+            start: notes_moveNoteOnTop,
+            stop: saveNoteAfterMove
+        }).draggable({
+                start: notes_moveNoteOnTop,
+                stop: saveNoteAfterMove
+            });
 
-         notes_initEditor(jqNote);
+        notes_initEditor(jqNote);
 
 //        jqNote.mousedown(notes_moveNoteOnTop);
         jqNote.dblclick(notes_showNoteEditor);
@@ -77,12 +77,11 @@ function notes_moveNoteOnTop() {
 }
 
 
-
 function notes_initCreatedNote(newNoteContainerSelector, notesContainerSelector) {
     var jqNote = jQuery(newNoteContainerSelector).find(notes_const.NOTE_SELECTOR);
     var jqNotesContainer = jQuery(notesContainerSelector);
     jqNote.appendTo(jqNotesContainer);
-    
+
     notes_initNote(jqNote);
 }
 

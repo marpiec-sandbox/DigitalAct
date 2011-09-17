@@ -2,11 +2,11 @@
                 xmlns:f="http://java.sun.com/jsf/core"
                 xmlns:h="http://java.sun.com/jsf/html"
                 xmlns:ui="http://java.sun.com/jsf/facelets">
-    
+
     <ui:repeat var="note" value="#{notesBacking.notes}">
 
         <ui:decorate template="/parts/notes/note.xhtml">
-            <ui:param name="note" value="#{note}" />
+            <ui:param name="note" value="#{note}"/>
         </ui:decorate>
 
     </ui:repeat>

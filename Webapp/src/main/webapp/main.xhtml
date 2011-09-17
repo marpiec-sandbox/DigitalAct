@@ -4,14 +4,14 @@
                 xmlns:h="http://java.sun.com/jsf/html"
                 xmlns:ui="http://java.sun.com/jsf/facelets">
 
-    <ui:param name="pageTitle" value="Strona główna" />
+    <ui:param name="pageTitle" value="Strona główna"/>
 
     <h1>Zalogowany! Main Page</h1>
 
     <div>
-        <h:outputLink value="logout" >
+        <h:outputLink value="logout">
             Wyloguj się
-                </h:outputLink>
+        </h:outputLink>
 
     </div>
 
@@ -20,6 +20,6 @@
         <h:outputText value="Nazywasz się: #{person.name}"/>
     </div>
 
-    <ui:decorate template="/parts/notes/notes-dashboard.xhtml" />
+    <ui:decorate template="/parts/notes/notes-dashboard.xhtml"/>
 
 </ui:composition>
