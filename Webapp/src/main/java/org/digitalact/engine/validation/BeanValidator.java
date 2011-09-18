@@ -1,16 +1,16 @@
 package org.digitalact.engine.validation;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+import org.digitalact.faces.MyFacesUtils;
+
 import javax.annotation.PostConstruct;
-import javax.faces.application.FacesMessage;
-import javax.faces.context.FacesContext;
 import javax.inject.Named;
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 /**
  * Validator umożliwiający wykonanie walidacji z wykorzystaniem hibernate validatora (jsr303).
@@ -53,12 +53,11 @@ public class BeanValidator {
      * @return false w przypadku błędów walidacji
      */
     public boolean validateWithMessages(Object bean) {
-        FacesContext facesContext = FacesContext.getCurrentInstance();
         Set<ConstraintViolation<Object>> constraintViolations = validateBean(bean);
 
         for(ConstraintViolation<Object> violation: constraintViolations) {
-            FacesMessage facesMessage = new FacesMessage(violation.getMessage());
-            facesContext.addMessage(violation.getPropertyPath().toString(), facesMessage);
+            MyFacesUtils.addValidationMessage(violation.getPropertyPath().toString(),
+                    violation.getMessage());
         }
 
         return constraintViolations.isEmpty();

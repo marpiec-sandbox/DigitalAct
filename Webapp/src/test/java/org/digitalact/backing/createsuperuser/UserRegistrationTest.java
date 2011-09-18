@@ -12,13 +12,13 @@ import org.testng.annotations.Test;
 
 import javax.inject.Inject;
 
-import static org.testng.Assert.assertNotNull;
+import static org.testng.Assert.*;
 
 /**
  * Test weryfikujący możliwość rejestracji superużytkownika.
  */
 @ContextConfiguration(locations={"classpath:webapp-spring.xml", "classpath:spring-test-beans.xml"})
-public class SuperUserCreationTest extends AbstractTransactionalTestNGSpringContextTests {
+public class UserRegistrationTest extends AbstractTransactionalTestNGSpringContextTests {
 
     @Inject
     private UserRegistrationBacking userRegistrationBacking;
@@ -49,10 +49,7 @@ public class SuperUserCreationTest extends AbstractTransactionalTestNGSpringCont
     @Test
     public void testCorrectSuperuserRegistration() {
         //having
-        userRegistrationForm.setEmail("m.pieciukiewicz@gmail.com");
-        userRegistrationForm.setName("Marcin Pieciukiewicz");
-        userRegistrationForm.setPassword("aaa333");
-        userRegistrationForm.setPasswordRetype("aaa333");
+        fillFormWithCorrectData();
 
         //when
         userRegistrationBacking.registerSuperuser();
@@ -61,5 +58,66 @@ public class SuperUserCreationTest extends AbstractTransactionalTestNGSpringCont
         Person person = userQuery.findByEmail("m.pieciukiewicz@gmail.com");
         assertNotNull(person);
     }
+
+    private void fillFormWithCorrectData() {
+        userRegistrationForm.setEmail("m.pieciukiewicz@gmail.com");
+        userRegistrationForm.setName("Marcin Pieciukiewicz");
+        userRegistrationForm.setPassword("aaa333");
+        userRegistrationForm.setPasswordRetype("aaa333");
+    }
+
+
+    /**
+     * Testuje poprawność zakładania konta superużytkownika.
+     */
+    @Test
+    public void testIncorrectSuperuserRegistration() {
+        //having
+        fillFormWithCorrectData();
+        userRegistrationForm.setPasswordRetype("aaa33");
+
+        //when
+        userRegistrationBacking.registerSuperuser();
+
+        //then
+        Person person = userQuery.findByEmail("m.pieciukiewicz@gmail.com");
+        assertNull(person);
+    }
+
+        /**
+     * Testuje poprawność zakładania konta superużytkownika.
+     */
+    @Test
+    public void testCorrectUserRegistration() {
+        //having
+        fillFormWithCorrectData();
+
+        //when
+        userRegistrationBacking.registerUser();
+
+        //then
+        Person person = userQuery.findByEmail("m.pieciukiewicz@gmail.com");
+        assertNotNull(person);
+    }
+
+    /**
+     * Testuje poprawność zakładania konta superużytkownika.
+     */
+    @Test
+    public void testIncorrectUserRegistration() {
+        //having
+        fillFormWithCorrectData();
+        userRegistrationForm.setPasswordRetype("aaa33");
+
+        //when
+        userRegistrationBacking.registerUser();
+
+        //then
+        Person person = userQuery.findByEmail("m.pieciukiewicz@gmail.com");
+        assertNull(person);
+    }
+
+
+
 
 }
