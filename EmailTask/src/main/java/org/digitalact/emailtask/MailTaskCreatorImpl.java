@@ -20,6 +20,8 @@ import java.util.Date;
 @Named
 public class MailTaskCreatorImpl implements MailTaskCreator {
 
+    private static final int TASK_VALID_DURATION_HOURS = 24;
+
     @Inject
     private EmailTaskDao emailTaskDao;
     
@@ -40,7 +42,7 @@ public class MailTaskCreatorImpl implements MailTaskCreator {
 
     private void createAndSaveTask(String email, Long personId, String taskCode, Task task) {
         Date creationDate = new Date();
-        Date expiriationDate = MyDateUtils.add24h(creationDate);
+        Date expiriationDate = MyDateUtils.addTime(creationDate, TASK_VALID_DURATION_HOURS, 0);
         
         EmailTask emailTask = constructEmailTask(creationDate, email, expiriationDate, personId, task, taskCode);
         emailTaskDao.save(emailTask);

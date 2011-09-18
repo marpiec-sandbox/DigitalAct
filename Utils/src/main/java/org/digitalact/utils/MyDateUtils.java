@@ -9,6 +9,8 @@ import java.util.Date;
 public final class MyDateUtils {
 
     private static final int MILLS_IN_24H = 86400000;
+    private static final int MILLS_IN_1H = 3600000;
+    private static final int MILLS_IN_1M = 60000;
 
     private MyDateUtils() {
     }
@@ -16,11 +18,19 @@ public final class MyDateUtils {
     //TODO: zamienić na obsługe JodaTime
 
     /**
-     * Dodaje 24 godziny do podanej daty.
+     * Dodaje określony czas do podanej daty.
      * @param date data początkowa
-     * @return data powiększona o 24h
+     * @param hours godziny do dodania
+     * @param minutes minuty do dodania
+     * @return data powiększona o podany czas
      */
-    public static Date add24h(Date date) {
-        return new Date(date.getTime()+MILLS_IN_24H);
+    public static Date addTime(Date date, int hours, int minutes) {
+        return new Date(date.getTime() + calculateMills(hours, minutes));
     }
+
+    private static int calculateMills(int hours, int minutes) {
+        return MILLS_IN_1H * hours + MILLS_IN_1M * minutes;
+    }
+
+
 }
