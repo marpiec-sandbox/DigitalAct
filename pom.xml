@@ -16,6 +16,7 @@
         <module>Domain</module>
         <module>Core</module>
         <module>Webapp</module>
+        <module>FileServer</module>
     </modules>
 
     <properties>
