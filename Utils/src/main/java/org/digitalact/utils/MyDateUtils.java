@@ -8,9 +8,9 @@ import java.util.Date;
  */
 public final class MyDateUtils {
 
-    private static final int MILLS_IN_24H = 86400000;
-    private static final int MILLS_IN_1H = 3600000;
-    private static final int MILLS_IN_1M = 60000;
+    public static final int MILLS_IN_24H = 86400000;
+    public static final int MILLS_IN_1H = 3600000;
+    public static final int MILLS_IN_1M = 60000;
 
     private MyDateUtils() {
     }
