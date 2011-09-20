@@ -20,17 +20,19 @@ public class FileServingServlet extends HttpServlet {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FileServingServlet.class);
 
-    private static final String FILES_DIRECTORY = "C:/Projekty/DigitalAct/Working/Files/";
-
     private static final String FILE_IDENTIFIER_PARAM = "f";
     private static final String FILE_CHECKSUM_PARAM = "c";
     private static final String DEFAULT_CACHE_NAME = "main_cache";
+
+    private FileServerConfiguration configuration;
 
     private FileLoader fileLoader;
 
     @Override
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
+
+        configuration = new FileServerConfiguration();
 
         CacheManager cacheManager = CacheManager.create();
         cacheManager.addCache(DEFAULT_CACHE_NAME);
@@ -54,7 +56,7 @@ public class FileServingServlet extends HttpServlet {
         }
 
         //Wczytanie pliku
-        FileData fileData = fileLoader.loadFile(FILES_DIRECTORY + fileIdentifier);
+        FileData fileData = fileLoader.loadFile(configuration.getFilesDirectory() + fileIdentifier);
 
         if (fileData == null) {
             response.sendError(HttpServletResponse.SC_NOT_FOUND);
