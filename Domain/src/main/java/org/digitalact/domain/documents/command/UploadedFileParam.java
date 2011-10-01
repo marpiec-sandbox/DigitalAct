@@ -1,4 +1,4 @@
-package org.digitalact.upload;
+package org.digitalact.domain.documents.command;
 
 /**
  * Dane potrzebne do obsługi wgranego pliku.

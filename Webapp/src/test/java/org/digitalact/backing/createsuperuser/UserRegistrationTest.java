@@ -45,7 +45,7 @@ public class UserRegistrationTest extends AbstractTransactionalTestNGSpringConte
 
 
     private void fillFormWithCorrectData() {
-        userRegistrationForm.setEmail("m.pieciukiewicz@gmail.com");
+        userRegistrationForm.setEmail("zdfgsiue@sdfgsf.com");
         userRegistrationForm.setName("Marcin Pieciukiewicz");
         userRegistrationForm.setPassword("aaa333");
         userRegistrationForm.setPasswordRetype("aaa333");
@@ -65,7 +65,7 @@ public class UserRegistrationTest extends AbstractTransactionalTestNGSpringConte
         userRegistrationBacking.registerUser();
 
         //then
-        Person person = userQuery.findByEmail("m.pieciukiewicz@gmail.com");
+        Person person = userQuery.findByEmail("zdfgsiue@sdfgsf.com");
         assertNotNull(person);
     }
 
@@ -82,7 +82,7 @@ public class UserRegistrationTest extends AbstractTransactionalTestNGSpringConte
         userRegistrationBacking.registerUser();
 
         //then
-        Person person = userQuery.findByEmail("m.pieciukiewicz@gmail.com");
+        Person person = userQuery.findByEmail("zdfgsiue@sdfgsf.com");
         assertNull(person);
     }
 

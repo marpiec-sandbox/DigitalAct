@@ -2,9 +2,14 @@ package org.digitalact.domain.documents.command;
 
 import org.digitalact.domain.documents.entity.DocumentType;
 
+/**
+ * Klasa odpowiedzialna za modyfikacje na stronach dokumentów.
+ */
 public interface DocumentPageCommand {
 
-    public long saveNewDocumentPage(String act, int pageNumber, String originalFileName,
-                                    String fileLocation, DocumentType documentType, byte[] fileContent,
-                                    String fileType);
+    /**
+     * Zapisuje podany plik na dysku i dokonuje wpisu w bazie danych.
+     * @param param dane wgranego pliku
+     */
+     public void storeUploadedFile(String uploadedFileDirectory, UploadedFileParam param);
 }

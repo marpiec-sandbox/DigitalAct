@@ -2,53 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb059f09-ce32-413b-a866-8df44886f5b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/builder/DocumentPageBuilder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/DocumentPageCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/DocumentPageCommandImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/dao/DocumentPageDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/entity/DocumentPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/entity/DocumentType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/query/DocumentPageQuery.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/query/DocumentPageQueryImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Webapp/config/digitalact.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/backing/library/CasePreviewBacking.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/backing/library/DocumentPageUploadServlet.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/backing/library/PageInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/configuration/WebappConfiguration.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/configuration/WebappConfigurationImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/upload/UploadedFileCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/upload/UploadedFileCommandImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/upload/UploadedFileParam.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Webapp/src/main/webapp/case/case-edition.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Webapp/src/main/webapp/js/library.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Webapp/src/main/webapp/library/case-preview.xhtml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Webapp/src/main/webapp/skin/default/library.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Webapp/src/test/resources/digitalact/digitalact.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3rdParty/asual-lesscss-engine/src/main/resources/META-INF/less.js" afterPath="$PROJECT_DIR$/3rdParty/asual-lesscss-engine/src/main/resources/META-INF/less.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/FileNameGenerator.java" />
+      <change type="DELETED" beforePath="C:\Projekty\DigitalAct\DigitalAct\Webapp\src\main\java\org\digitalact\upload\UploadedFileCommand.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Projekty\DigitalAct\DigitalAct\Webapp\src\main\java\org\digitalact\upload\UploadedFileCommandImpl.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\Projekty\DigitalAct\DigitalAct\Webapp\src\main\java\org\digitalact\backing\library\CasePreviewBacking.java" afterPath="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/library/CasePreviewBacking.java" />
+      <change type="MOVED" beforePath="C:\Projekty\DigitalAct\DigitalAct\Webapp\src\main\java\org\digitalact\backing\library\DocumentPageUploadServlet.java" afterPath="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/library/DocumentPageUploadServlet.java" />
+      <change type="MOVED" beforePath="C:\Projekty\DigitalAct\DigitalAct\Webapp\src\main\java\org\digitalact\backing\library\PageInfo.java" afterPath="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/library/PageInfo.java" />
+      <change type="MOVED" beforePath="C:\Projekty\DigitalAct\DigitalAct\Webapp\src\main\java\org\digitalact\upload\UploadedFileParam.java" afterPath="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/UploadedFileParam.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/Core.iml" afterPath="$PROJECT_DIR$/Core/Core.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Core/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/Core/src/main/resources/META-INF/persistence.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigitalAct.iml" afterPath="$PROJECT_DIR$/DigitalAct.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigitalAct.ipr" afterPath="$PROJECT_DIR$/DigitalAct.ipr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DigitalAct.iws" afterPath="$PROJECT_DIR$/DigitalAct.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Domain/Domain.iml" afterPath="$PROJECT_DIR$/Domain/Domain.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/notes/dao/StickyNoteDao.java" afterPath="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/notes/dao/StickyNoteDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EmailEngine/EmailEngine.iml" afterPath="$PROJECT_DIR$/EmailEngine/EmailEngine.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/EmailTask/EmailTask.iml" afterPath="$PROJECT_DIR$/EmailTask/EmailTask.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileServer/FileServer.iml" afterPath="$PROJECT_DIR$/FileServer/FileServer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileServer/src/main/java/org/digitalact/fileserver/servlet/FileServingServlet.java" afterPath="$PROJECT_DIR$/FileServer/src/main/java/org/digitalact/fileserver/servlet/FileServingServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileServer/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/FileServer/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utils/Utils.iml" afterPath="$PROJECT_DIR$/Utils/Utils.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utils/src/main/java/org/digitalact/constants/MyConstants.java" afterPath="$PROJECT_DIR$/Utils/src/main/java/org/digitalact/constants/MyConstants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Domain/pom.xml" afterPath="$PROJECT_DIR$/Domain/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/DocumentPageCommand.java" afterPath="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/DocumentPageCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/DocumentPageCommandImpl.java" afterPath="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/DocumentPageCommandImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Utils/src/main/java/org/digitalact/utils/MyRandomStringUtils.java" afterPath="$PROJECT_DIR$/Utils/src/main/java/org/digitalact/utils/MyRandomStringUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Webapp/Webapp.iml" afterPath="$PROJECT_DIR$/Webapp/Webapp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Webapp/pom.xml" afterPath="$PROJECT_DIR$/Webapp/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/backing/userregistration/UserRegistrationForm.java" afterPath="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/backing/userregistration/UserRegistrationForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Webapp/src/main/resources/spring-security.xml" afterPath="$PROJECT_DIR$/Webapp/src/main/resources/spring-security.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Webapp/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/Webapp/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Webapp/src/main/webapp/main.xhtml" afterPath="$PROJECT_DIR$/Webapp/src/main/webapp/main.xhtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Webapp/src/main/webapp/skin/default/main.css" afterPath="$PROJECT_DIR$/Webapp/src/main/webapp/skin/default/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Webapp/src/main/webapp/templates/page/root.xhtml" afterPath="$PROJECT_DIR$/Webapp/src/main/webapp/templates/page/root.xhtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Webapp/src/test/java/org/digitalact/backing/createsuperuser/UserRegistrationTest.java" afterPath="$PROJECT_DIR$/Webapp/src/test/java/org/digitalact/backing/createsuperuser/UserRegistrationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="TaskKeeper.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -129,8 +100,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -139,10 +110,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UploadedFileCommandImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/upload/UploadedFileCommandImpl.java">
+      <file leaf-file-name="DocumentPageCommandImpl.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/DocumentPageCommandImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="54" selection-start="830" selection-end="830" vertical-scroll-proportion="0.0">
+            <state line="22" column="13" selection-start="738" selection-end="738" vertical-scroll-proportion="-0.2254025">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -150,65 +121,78 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UploadedFileCommand.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/upload/UploadedFileCommand.java">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Domain/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="23" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
+            <state line="59" column="34" selection-start="2046" selection-end="2046" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UploadedFileParam.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/upload/UploadedFileParam.java">
+      <file leaf-file-name="UserRegistrationTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Webapp/src/test/java/org/digitalact/backing/createsuperuser/UserRegistrationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="37" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
+            <state line="84" column="66" selection-start="2345" selection-end="2345" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebappConfiguration.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/configuration/WebappConfiguration.java">
+      <file leaf-file-name="CasePreviewBacking.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/library/CasePreviewBacking.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="57" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
+            <state line="28" column="71" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileNameGenerator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/FileNameGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="35" selection-start="719" selection-end="719" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyRandomStringUtils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utils/src/main/java/org/digitalact/utils/MyRandomStringUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="70" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyConstants.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Utils/src/main/java/org/digitalact/constants/MyConstants.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="28" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DocumentPageCommand.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/DocumentPageCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="31" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="DocumentPageUploadServlet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/backing/library/DocumentPageUploadServlet.java">
+        <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/library/DocumentPageUploadServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="43" selection-start="2897" selection-end="2897" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PageInfo.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/backing/library/PageInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="43" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="case-edition.xhtml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Webapp/src/main/webapp/case/case-edition.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="16" selection-start="483" selection-end="483" vertical-scroll-proportion="0.37362638">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.xhtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Webapp/src/main/webapp/main.xhtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="335" selection-end="335" vertical-scroll-proportion="6.1153846">
-              <folding />
+            <state line="45" column="51" selection-start="1693" selection-end="1693" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -227,22 +211,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Utils/src/main/java/org/digitalact/constants/MyConstants.java" />
-        <option value="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/entity/DocumentPage.java" />
-        <option value="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/builder/DocumentPageBuilder.java" />
-        <option value="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/DocumentPageCommandImpl.java" />
-        <option value="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/DocumentPageCommand.java" />
-        <option value="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/backing/caseedition/CaseEditionBacking.java" />
-        <option value="$PROJECT_DIR$/FileServer/src/main/java/org/digitalact/fileserver/servlet/FileServingServlet.java" />
-        <option value="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/backing/library/CasePreviewBacking.java" />
-        <option value="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/upload/UploadedFileCommandImpl.java" />
-        <option value="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/upload/UploadedFileCommand.java" />
-        <option value="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/upload/UploadedFileParam.java" />
         <option value="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/configuration/WebappConfiguration.java" />
         <option value="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/backing/library/DocumentPageUploadServlet.java" />
         <option value="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/backing/library/PageInfo.java" />
         <option value="$PROJECT_DIR$/Webapp/src/main/webapp/main.xhtml" />
         <option value="$PROJECT_DIR$/Webapp/src/main/webapp/case/case-edition.xhtml" />
+        <option value="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/UploadedFileParam.java" />
+        <option value="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/upload/UploadedFileCommandImpl.java" />
+        <option value="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/library/DocumentPageUploadServlet.java" />
+        <option value="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/DocumentPageCommand.java" />
+        <option value="$PROJECT_DIR$/Utils/src/main/java/org/digitalact/utils/MyRandomStringUtils.java" />
+        <option value="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/DocumentPageCommandImpl.java" />
+        <option value="$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/FileNameGenerator.java" />
+        <option value="$PROJECT_DIR$/Domain/pom.xml" />
+        <option value="$PROJECT_DIR$/Webapp/src/test/java/org/digitalact/backing/createsuperuser/UserRegistrationTest.java" />
+        <option value="$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/library/CasePreviewBacking.java" />
+        <option value="$PROJECT_DIR$/Utils/src/main/java/org/digitalact/utils/MyImagesUtils.java" />
       </list>
     </option>
   </component>
@@ -349,6 +333,36 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Favorites">
+        <subPane subId="TaskKeeper">
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.intellij.ide.favoritesTreeView.FavoritesTreeNodeDescriptor" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DigitalAct" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -702,10 +716,6 @@
               <option name="myItemId" value="digitalact" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="upload" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -734,74 +744,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="digitalact" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DigitalAct" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DigitalAct" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="digitalact" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DigitalAct" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DigitalAct" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="digitalact" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="backing" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -955,7 +897,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FileServer" />
+              <option name="myItemId" value="Domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -969,7 +911,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FileServer" />
+              <option name="myItemId" value="Domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -987,7 +929,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FileServer" />
+              <option name="myItemId" value="Domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1009,7 +951,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FileServer" />
+              <option name="myItemId" value="Domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1025,7 +967,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="servlet" />
+              <option name="myItemId" value="domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1039,11 +981,65 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="FileServer" />
+              <option name="myItemId" value="Domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="documents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DigitalAct" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DigitalAct" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="documents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="command" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1081,36 +1077,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DigitalAct" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Favorites">
-        <subPane subId="TaskKeeper">
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.intellij.ide.favoritesTreeView.FavoritesTreeNodeDescriptor" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1136,20 +1102,20 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLanguage" value="Java" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.digitalact.backing.createsuperuser" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.digitalact.domain.documents.command" />
       <recent name="org.digitalact.domain.documents.dao" />
       <recent name="org.digitalact.domain.documents.entity" />
       <recent name="org.digitalact.utils" />
       <recent name="org.digitalact.faces" />
-      <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Projekty\DigitalAct\DigitalAct\Webapp\src\main\webapp" />
@@ -1403,23 +1369,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" />
       <module name="" />
@@ -1446,6 +1395,23 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
@@ -1481,16 +1447,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method>
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" />
       <module name="" />
@@ -1516,25 +1472,13 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
-      <option name="LOCAL" value="false" />
-      <server-settings>
-        <option name="DEPLOY_TOMCAT_APPS" value="false" />
-        <option name="BASE_DIRECTORY_NAME" value="_TaskKeeper_2" />
-      </server-settings>
-      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
-      <extension name="coverage" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="50772" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="false" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method>
         <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
@@ -1582,6 +1526,28 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote">
+      <option name="LOCAL" value="false" />
+      <server-settings>
+        <option name="DEPLOY_TOMCAT_APPS" value="false" />
+        <option name="BASE_DIRECTORY_NAME" value="_TaskKeeper_2" />
+      </server-settings>
+      <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+      <extension name="coverage" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="50772" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method>
         <option name="BuildArtifacts" enabled="false" />
         <option name="Make" enabled="true" />
@@ -1936,14 +1902,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1324" height="916" extended-state="6" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1324" height="916" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6052288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997677" sideWeight="0.15294118" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3124183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21045752" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3124183" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21045752" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920218" sideWeight="0.67058825" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1952,7 +1918,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997677" sideWeight="0.3254902" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="left" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.327653" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30452022" sideWeight="0.6875817" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33544806" sideWeight="0.7895425" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20915033" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2005,103 +1971,112 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/DocumentPageCommandImpl.java">
+    <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/library/PageInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="55" selection-start="620" selection-end="620" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/DocumentPageCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="52" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/query/DocumentPageQueryImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/query/DocumentPageQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="17" selection-start="301" selection-end="301" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FileServer/src/main/java/org/digitalact/fileserver/servlet/FileServingServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="23" selection-start="2026" selection-end="2026" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/backing/library/CasePreviewBacking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="73" selection-start="1072" selection-end="1072" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/upload/UploadedFileCommandImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="54" selection-start="830" selection-end="830" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/upload/UploadedFileCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="23" selection-start="352" selection-end="352" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/upload/UploadedFileParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="37" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/configuration/WebappConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="57" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/backing/library/DocumentPageUploadServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="43" selection-start="2897" selection-end="2897" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/backing/library/PageInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="43" selection-start="256" selection-end="256" vertical-scroll-proportion="0.0">
+        <state line="12" column="5" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Webapp/src/main/webapp/main.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="335" selection-end="335" vertical-scroll-proportion="6.1153846">
+        <state line="8" column="0" selection-start="335" selection-end="335" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Webapp/src/main/webapp/case/case-edition.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="16" selection-start="483" selection-end="483" vertical-scroll-proportion="0.37362638">
+        <state line="19" column="59" selection-start="1087" selection-end="1087" vertical-scroll-proportion="-12.423077">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/UploadedFileParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="13" selection-start="116" selection-end="116" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/configuration/WebappConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="57" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.5/servlet-api-2.5-sources.jar!/javax/servlet/ServletException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="13" selection-start="1100" selection-end="1100" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/library/DocumentPageUploadServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="51" selection-start="1693" selection-end="1693" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/src/main/java/org/digitalact/constants/MyConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="28" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/src/main/java/org/digitalact/utils/MyRandomStringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="70" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/DocumentPageCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="31" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="34" selection-start="2046" selection-end="2046" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Webapp/src/test/java/org/digitalact/backing/createsuperuser/UserRegistrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="66" selection-start="2345" selection-end="2345" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Webapp/src/main/java/org/digitalact/library/CasePreviewBacking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="71" selection-start="775" selection-end="775" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/FileNameGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="35" selection-start="719" selection-end="719" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/src/main/java/org/digitalact/domain/documents/command/DocumentPageCommandImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="13" selection-start="738" selection-end="738" vertical-scroll-proportion="-0.2254025">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

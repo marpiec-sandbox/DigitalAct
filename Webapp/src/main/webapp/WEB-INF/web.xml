@@ -91,7 +91,7 @@
     <servlet>
         <description>Servlet umożliwiający wgrywanie stron dokumentów</description>
         <servlet-name>documentPageUploadServlet</servlet-name>
-        <servlet-class>org.digitalact.backing.library.DocumentPageUploadServlet</servlet-class>
+        <servlet-class>org.digitalact.library.DocumentPageUploadServlet</servlet-class>
     </servlet>
 
 

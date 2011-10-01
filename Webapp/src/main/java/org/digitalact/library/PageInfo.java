@@ -1,4 +1,4 @@
-package org.digitalact.backing.library;
+package org.digitalact.library;
 
 /**
  * Plik zawierający podstawowe informacje potrzebne do wyświetlenia strony.

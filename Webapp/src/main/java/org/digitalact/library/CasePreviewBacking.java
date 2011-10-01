@@ -1,4 +1,4 @@
-package org.digitalact.backing.library;
+package org.digitalact.library;
 
 import org.digitalact.configuration.WebappConfiguration;
 import org.digitalact.domain.documents.entity.DocumentPage;
@@ -26,7 +26,7 @@ public class CasePreviewBacking {
 
     private List<PageInfo> getPageList() {
 
-        List<DocumentPage> pages = documentPageQuery.findPagesForAct("a");
+        List<DocumentPage> pages = documentPageQuery.findPagesForAct("A");
 
         List<PageInfo> pageInfoList = new ArrayList<PageInfo>();
 

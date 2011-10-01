@@ -111,6 +111,7 @@
     <orderEntry type="library" name="Maven: org.springframework:org.springframework.context:3.0.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:org.springframework.expression:3.0.5.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.6.1" level="project" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:2.0.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
     <orderEntry type="library" name="Maven: com.sun.faces:jsf-api:2.1.2" level="project" />
     <orderEntry type="library" name="Maven: com.sun.faces:jsf-impl:2.1.2" level="project" />
@@ -118,7 +119,6 @@
     <orderEntry type="library" name="Maven: com.asual.lesscss:lesscss-engine:1.1.4" level="project" />
     <orderEntry type="library" name="Maven: com.yahoo.platform.yui:yuicompressor:2.3.6" level="project" />
     <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.2.2" level="project" />
-    <orderEntry type="library" name="Maven: commons-io:commons-io:2.0.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.testng:testng:6.1.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.beanshell:bsh:2.0b4" level="project" />
