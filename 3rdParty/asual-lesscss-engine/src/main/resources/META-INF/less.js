@@ -829,7 +829,7 @@ less.Parser = function Parser(env) {
                 // We start by matching `.rounded (`, and then proceed on to
                 // the argument list, which has optional default values.
                 // We store the parameters in `params`, with a `value` key,
-                // if there is a value, such as in the case of `@radius`.
+                // if there is a value, such as in the documents of `@radius`.
                 //
                 // Once we've got our params list, and a closing `)`, we parse
                 // the `{...}` block.
@@ -1461,12 +1461,12 @@ tree.Call.prototype = {
     //
     // When evaluating a function call,
     // we either find the function in `tree.functions` [1],
-    // in which case we call it, passing the  evaluated arguments,
+    // in which documents we call it, passing the  evaluated arguments,
     // or we simply print it out as it appeared originally [2].
     //
     // The *functions.js* file contains the built-in functions.
     //
-    // The reason why we evaluate the arguments, is in the case where
+    // The reason why we evaluate the arguments, is in the documents where
     // we try to pass a variable to a function, like: `saturate(@color)`.
     // The function should receive the value, not the variable.
     //

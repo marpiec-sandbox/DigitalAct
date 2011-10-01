@@ -6,7 +6,8 @@
 
         <class>org.digitalact.domain.users.entity.Person</class>
         
-        
+        <class>org.digitalact.domain.documents.entity.DocumentPage</class>
+
         <class>org.digitalact.domain.notes.entity.StickyNote</class>
         <class>org.digitalact.domain.notes.entity.StickyNoteVisualProperties</class>
         

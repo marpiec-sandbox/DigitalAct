@@ -20,6 +20,7 @@ public class FileServingServlet extends HttpServlet {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FileServingServlet.class);
 
+ //   private static final String CASE_IDENTIFIER_PARAM = "s";
     private static final String FILE_IDENTIFIER_PARAM = "f";
     private static final String FILE_CHECKSUM_PARAM = "c";
     private static final String DEFAULT_CACHE_NAME = "main_cache";
@@ -45,18 +46,20 @@ public class FileServingServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+     //   String caseIdentifier = request.getParameter(CASE_IDENTIFIER_PARAM);
         String fileIdentifier = request.getParameter(FILE_IDENTIFIER_PARAM);
         String fileChecksum = request.getParameter(FILE_CHECKSUM_PARAM);
 
         //Sprawdzanie czy podane odpowiednie parametry
-        if(StringUtils.isEmpty(fileIdentifier) ||
-           StringUtils.isEmpty(fileChecksum)) {
+        if (//StringUtils.isEmpty(caseIdentifier) ||
+                StringUtils.isEmpty(fileIdentifier) ||
+                StringUtils.isEmpty(fileChecksum)) {
             response.sendError(HttpServletResponse.SC_NOT_FOUND);
             return;
         }
 
         //Wczytanie pliku
-        FileData fileData = fileLoader.loadFile(configuration.getFilesDirectory() + fileIdentifier);
+        FileData fileData = fileLoader.loadFile(configuration.getFilesDirectory() +fileIdentifier);
 
         if (fileData == null) {
             response.sendError(HttpServletResponse.SC_NOT_FOUND);
@@ -64,7 +67,7 @@ public class FileServingServlet extends HttpServlet {
         }
 
         //Sprawdzenie czy suma kontrolna pliku jest poprawna
-        if(!StringUtils.equals(fileChecksum, fileData.getChecksum())) {
+        if (!StringUtils.equals(fileChecksum, fileData.getChecksum())) {
             response.sendError(HttpServletResponse.SC_FORBIDDEN);
             LOGGER.warn("Unauthorized access try to file " + fileIdentifier);
             return;

@@ -1,14 +1,15 @@
 package org.digitalact.domain.notes.dao;
 
-import java.util.List;
 import org.digitalact.domain.notes.entity.StickyNote;
 import org.digitalact.domain.users.entity.Person;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import org.synyx.hades.dao.GenericDao;
 
+import java.util.List;
+
 /**
- * Dao do obslugi notetek, klasy StickyNoteDao.
+ * Dao do obslugi notetek, klasy StickyNote.
  * @author Marcin Pieciukiewicz
  */
 @Repository

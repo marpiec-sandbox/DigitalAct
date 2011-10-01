@@ -31,10 +31,6 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-    <!-- Wymagane, aby beany springowe mogly byc deklarowane jako session scope lub request scope -->
-    <!--listener>
-        <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
-    </listener-->
     <!-- Logowanie spring web i spring security -->
     <listener>
         <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
@@ -91,6 +87,12 @@
         <servlet-name>saveNotePropertiesServlet</servlet-name>
         <servlet-class>org.digitalact.notes.SaveNotePropertiesServlet</servlet-class>
     </servlet>
+    
+    <servlet>
+        <description>Servlet umożliwiający wgrywanie stron dokumentów</description>
+        <servlet-name>documentPageUploadServlet</servlet-name>
+        <servlet-class>org.digitalact.backing.library.DocumentPageUploadServlet</servlet-class>
+    </servlet>
 
 
     <servlet>
@@ -124,6 +126,11 @@
     <servlet-mapping>
         <servlet-name>saveNotePropertiesServlet</servlet-name>
         <url-pattern>/ajax/save-note</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>documentPageUploadServlet</servlet-name>
+        <url-pattern>/ajax/page-upload</url-pattern>
     </servlet-mapping>
 
 

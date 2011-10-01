@@ -39,6 +39,10 @@
     <orderEntry type="library" name="Maven: commons-pool:commons-pool:1.5.4" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
     <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.1" level="project" />
+    <orderEntry type="library" name="Maven: commons-configuration:commons-configuration:1.7" level="project" />
+    <orderEntry type="library" name="Maven: commons-digester:commons-digester:1.8.1" level="project" />
+    <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.8.3" level="project" />
+    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.4" level="project" />
     <orderEntry type="library" name="Maven: joda-time:joda-time:2.0" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:0.9.29" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-core:0.9.29" level="project" />

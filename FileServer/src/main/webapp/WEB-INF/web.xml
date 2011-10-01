@@ -11,7 +11,7 @@
 
     <servlet-mapping>
         <servlet-name>fileServingServlet</servlet-name>
-        <url-pattern>/file/*</url-pattern>
+        <url-pattern>/file</url-pattern>
     </servlet-mapping>
 
 </web-app>

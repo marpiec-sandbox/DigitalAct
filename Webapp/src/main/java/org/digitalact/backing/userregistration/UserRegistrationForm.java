@@ -68,4 +68,7 @@ public class UserRegistrationForm {
         this.passwordRetype = passwordRetype;
     }
 
+    public String getPasswordRetype() {
+        return passwordRetype;
+    }
 }

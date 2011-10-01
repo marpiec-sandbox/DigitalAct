@@ -1,0 +1,34 @@
+<ui:composition template="/templates/page/root.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <ui:param name="pageTitle" value="Podgląd sprawy"/>
+
+    <div class="library">
+
+        <div class="pagesList">
+
+        </div>
+        <div class="pagePreview">
+            <div class="documentImage">
+                <!--<img src="http://localhost:8080/fileserver/file/?f=scan.jpg&amp;c=e0cc4a78add571466772451f522db68084be4397c734a49c9d1f34d2d8279995"-->
+                     <!--id="documentImage"-->
+                     <!--alt="documentTODOwstawicnazwe"/>-->
+            </div>
+            <div class="tools">
+                <div id="zoomSlider"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        var library_pageList = jsonToObject('#{casePreviewBacking.pagesListJson}');
+        library_initLibrary(library_pageList);
+
+
+    </script>
+
+</ui:composition>

@@ -18,6 +18,12 @@
         <intercept-url pattern="/main.html" access="isAuthenticated()"/>
 
         <intercept-url pattern="/ajax/save-note" access="isAuthenticated()" method="POST"/>
+        <intercept-url pattern="/ajax/page-upload" access="isAuthenticated()"/>
+
+
+        <intercept-url pattern="/library/case-preview.html" access="isAuthenticated()"/>
+        <intercept-url pattern="/case/case-edition.html" access="isAuthenticated()"/>
+
 
         <intercept-url pattern="/javax.faces.resource/**" filters="none"/>
         <intercept-url pattern="/static/**" filters="none"/>

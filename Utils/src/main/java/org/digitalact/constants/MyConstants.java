@@ -14,6 +14,7 @@ public final class MyConstants {
     public static final String MESSAGES_VAR_NAME = "msg";
     public static final String DOMAIN_EXCEPTION_PREFIX = "domainException_";
     public static final String SYSTEM_EMAIL_SENDER_ADDRESS = "m.pieciukiewicz@gmail.com";
+    public static final int FILE_NAME_LENGTH = 16;
 
     /**
      * Ograniczenia zakładane na encje.

@@ -43,21 +43,6 @@ public class UserRegistrationTest extends AbstractTransactionalTestNGSpringConte
     public void tearDown() {
     }
 
-    /**
-     * Testuje poprawność zakładania konta superużytkownika.
-     */
-    @Test
-    public void testCorrectSuperuserRegistration() {
-        //having
-        fillFormWithCorrectData();
-
-        //when
-        userRegistrationBacking.registerSuperuser();
-
-        //then
-        Person person = userQuery.findByEmail("m.pieciukiewicz@gmail.com");
-        assertNotNull(person);
-    }
 
     private void fillFormWithCorrectData() {
         userRegistrationForm.setEmail("m.pieciukiewicz@gmail.com");
@@ -67,22 +52,6 @@ public class UserRegistrationTest extends AbstractTransactionalTestNGSpringConte
     }
 
 
-    /**
-     * Testuje poprawność zakładania konta superużytkownika.
-     */
-    @Test
-    public void testIncorrectSuperuserRegistration() {
-        //having
-        fillFormWithCorrectData();
-        userRegistrationForm.setPasswordRetype("aaa33");
-
-        //when
-        userRegistrationBacking.registerSuperuser();
-
-        //then
-        Person person = userQuery.findByEmail("m.pieciukiewicz@gmail.com");
-        assertNull(person);
-    }
 
         /**
      * Testuje poprawność zakładania konta superużytkownika.

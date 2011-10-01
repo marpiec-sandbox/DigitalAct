@@ -1,0 +1,106 @@
+<ui:composition template="/templates/page/root.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets">
+
+    <ui:param name="pageTitle" value="Edycja sprawy"/>
+
+        <ui:define name="style">
+        <link href="js/lib/fileupload/jquery.fileupload-ui.css" rel="stylesheet" type="text/css"/>
+    </ui:define>
+
+        <ui:define name="script">
+        <script src="js/lib/jquery.tmpl.min.js" type="text/javascript"></script>
+        <!--<script src="js/lib/jquery.cookie.js" type="text/javascript"></script>-->
+        <!--<script src="js/lib/fileupload/jquery.iframe-transport.js" type="text/javascript"></script>-->
+        <script src="js/lib/fileupload/jquery.fileupload.js" type="text/javascript"></script>
+        <script src="js/lib/fileupload/jquery.fileupload-ui.js" type="text/javascript"></script>
+        <script src="js/lib/fileupload/fileupload.js" type="text/javascript"></script>
+    </ui:define>
+
+<div id="fileupload">
+        <form action="ajax/page-upload" method="POST" enctype="multipart/form-data">
+            <div class="fileupload-buttonbar">
+                <input type="hidden" name="protocol" value="http" />
+                <label class="fileinput-button">
+                    <span>Dodaj strony teczki...</span>
+                    <h:outputText escape="false" value="&lt;input type='file' name='files[]' multiple=''>" />
+                </label>
+                <button type="submit" class="start">Rozpocznij wgrywanie</button>
+                <button type="reset" class="cancel">Anuluj wgrywanie stron</button>
+                <button type="button" class="delete">Usuń wybrane strony</button>
+            </div>
+        </form>
+        <div class="fileupload-content">
+            <table class="files">
+            </table>
+            <div class="fileupload-progressbar"></div>
+        </div>
+
+    </div>
+
+    <script id="template-upload" type="text/x-jquery-tmpl">
+
+    <tr class="template-upload{{if error}} ui-state-error{{/if}}">
+        <td class="preview"></td>
+        <td class="name">${name}</td>
+        <td class="size">${sizef}</td>
+        {{if error}}
+            <td class="error" colspan="2">Error:
+                {{if error === 'maxFileSize'}}File is too big
+                {{else error === 'minFileSize'}}File is too small
+                {{else error === 'acceptFileTypes'}}Filetype not allowed
+                {{else error === 'maxNumberOfFiles'}}Max number of files exceeded
+                {{else}}${error}
+                {{/if}}
+            </td>
+        {{else}}
+            <td class="progress"><div></div></td>
+            <td class="start"><button>Start</button></td>
+        {{/if}}
+        <td class="cancel"><button>Cancel</button></td>
+    </tr>
+</script>
+<script id="template-download" type="text/x-jquery-tmpl">
+    <tr class="template-download{{if error}} ui-state-error{{/if}}">
+        {{if error}}
+            <td></td>
+            <td class="name">${name}</td>
+            <td class="size">${sizef}</td>
+            <td class="error" colspan="2">Error:
+                {{if error === 1}}File exceeds upload_max_filesize (php.ini directive)
+                {{else error === 2}}File exceeds MAX_FILE_SIZE (HTML form directive)
+                {{else error === 3}}File was only partially uploaded
+                {{else error === 4}}No File was uploaded
+                {{else error === 5}}Missing a temporary folder
+                {{else error === 6}}Failed to write file to disk
+                {{else error === 7}}File upload stopped by extension
+                {{else error === 'maxFileSize'}}File is too big
+                {{else error === 'minFileSize'}}File is too small
+                {{else error === 'acceptFileTypes'}}Filetype not allowed
+                {{else error === 'maxNumberOfFiles'}}Max number of files exceeded
+                {{else error === 'uploadedBytes'}}Uploaded bytes exceed file size
+                {{else error === 'emptyResult'}}Empty file upload result
+                {{else}}${error}
+                {{/if}}
+            </td>
+        {{else}}
+            <td class="preview">
+                {{if thumbnail_url}}
+                    <a href="${url}" target="_blank"><img src="${thumbnail_url}"/></a>
+                {{/if}}
+            </td>
+            <td class="name">
+                <a href="${url}">${name}</a>
+            </td>
+            <td class="size">${sizef}</td>
+            <td colspan="2"></td>
+        {{/if}}
+        <td class="delete">
+            <button data-type="${delete_type}" data-url="${delete_url}">Delete</button>
+        </td>
+    </tr>
+</script>
+
+</ui:composition>

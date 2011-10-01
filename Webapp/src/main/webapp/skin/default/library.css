@@ -1,0 +1,78 @@
+.library {
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+
+     .pagesList {
+         background-color: #ded2c2;
+          position: absolute;
+         left: 0;
+         top: 0;
+         bottom: 0;
+         width: 130px;
+         overflow: auto;
+
+         .pageThumbnail {
+             display: block;
+             width: 86px;
+             height: 122px;
+             border: 2px solid #333333;
+             background-color: white;
+             margin: 10px;
+             padding: 2px;
+             font-size: 29px;
+             line-height: 111px;
+             text-align: center;
+         }
+
+        .pageThumbnail.selected {
+             border: 4px solid #8b0000;
+             width: 86px;
+             height: 122px;
+            padding: 0;
+        }
+
+     }
+
+    .pagePreview {
+        position: absolute;
+        top: 0;
+         bottom: 0;
+        left:130px;
+        right:0;
+
+       .documentImage {
+            position: absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:40px;
+            background-color: white;
+            overflow:hidden;
+            .documentImage {
+                position:absolute;
+                top:0;
+                left:0;
+            }
+        }
+
+        .tools {
+            position: absolute;
+            right:0;
+            top:0;
+            bottom:0;
+            width:20px;
+            padding: 20px 10px;
+            background-color: #ded2c2;
+            #zoomSlider {
+                 height: 100%;
+            }
+        }
+    }
+
+
+
+}
