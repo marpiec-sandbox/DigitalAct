@@ -3,12 +3,15 @@ function library_initZoomSlider() {
     jQuery("#zoomSlider").slider({
         orientation: "vertical",
         range: "min",
-        min: 1,
-        max: Math.exp(1)*2,
-        value: 1.23,
-        step: 0.001,
+        min: 0,
+        max: 100,
+        value: 50,
+        step: 0.1,
         slide: function( event, ui ) {
-            library_changePageZoom( (Math.log(ui.value)*150 + 20)/100);
+
+            var x = -1 + 0.028 * ui.value;
+            var y = Math.exp(x) * 400 / 6;
+            library_changePageZoom( Math.sqrt(y/100) );
         }
     });
 
