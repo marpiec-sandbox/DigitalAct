@@ -34,9 +34,9 @@
 
     <bean id="mainDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="org.postgresql.Driver"/>
-        <property name="url" value="jdbc:postgresql://localhost:5432/taskkeeper"/>
-        <property name="username" value="taskkeeper"/>
-        <property name="password" value="taskkeeper"/>
+        <property name="url" value="jdbc:postgresql://localhost:5432/digitalact"/>
+        <property name="username" value="digitalact"/>
+        <property name="password" value="digitalact"/>
     </bean>
 
 
