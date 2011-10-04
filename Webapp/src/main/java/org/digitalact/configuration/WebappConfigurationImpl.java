@@ -42,4 +42,20 @@ public class WebappConfigurationImpl implements WebappConfiguration {
     public String getUploadedFileDirectory() {
         return configuration.getString("uploaded_file_directory");
     }
+
+    @Override
+    public String getDatabaseConnectionUrl() {
+        return configuration.getString("database_connection_url");
+    }
+
+    @Override
+    public String getDatabaseUsername() {
+        return configuration.getString("database_username");
+    }
+
+    @Override
+    public String getDatabasePassword() {
+        return configuration.getString("database_password");
+    }
+
 }

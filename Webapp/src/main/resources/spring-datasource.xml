@@ -10,9 +10,9 @@
 
     <bean id="mainDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="org.postgresql.Driver"/>
-        <property name="url" value="jdbc:postgresql://localhost:5432/digitalact"/>
-        <property name="username" value="digitalact"/>
-        <property name="password" value="digitalact"/>
+        <property name="url" value="#{webappConfigurationImpl.databaseConnectionUrl}"/>
+        <property name="username" value="#{webappConfigurationImpl.databaseUsername}"/>
+        <property name="password" value="#{webappConfigurationImpl.databasePassword}"/>
     </bean>
 
 </beans>
