@@ -4,13 +4,13 @@
       xmlns:h="http://java.sun.com/jsf/html">
 <h:head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <meta name="author" content="Marcin Pieciukiewicz"/>
+    <meta name="author" content="Marcin Pieciukiewicz, Mariusz Piskorz"/>
     <meta name="description" content="System zarządzania zadaniami"/>
     <meta name="keywords" content="zadania, todo"/>
     <meta name="language" content="pl"/>
     <meta name="robots" content="index, follow"/>
     <title>Task Keeper #{pageTitle}</title>
-    <base href="/digitalact/"/>
+    <base href="#{webappConfigurationImpl.applicationUrl}"/>
     <!-- TODO - wyciagnac do konfiguracji (albo ze springa lub jsf)-->
     <link href="skin/default/main.css" rel="stylesheet" type="text/css"/>
     <link href="skin/css/ui-lightness/jquery-ui.css" rel="stylesheet" type="text/css"/>
@@ -20,7 +20,6 @@
     <script src="js/lib/jquery-min.js" type="text/javascript"></script>
     <script src="js/utils.js" type="text/javascript"></script>
     <script src="js/validation.js" type="text/javascript"></script>
-    <script src="js/notes.js" type="text/javascript"></script>
     <script src="js/library.js" type="text/javascript"></script>
     <script src="js/lib/jquery-ui-min.js" type="text/javascript"></script>
     <ui:insert name="script" />

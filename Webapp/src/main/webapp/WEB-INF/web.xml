@@ -83,12 +83,6 @@
     </servlet>
 
     <servlet>
-        <description>Servlet zapisujacy zmiany wygladu w notatkach.</description>
-        <servlet-name>saveNotePropertiesServlet</servlet-name>
-        <servlet-class>org.digitalact.notes.SaveNotePropertiesServlet</servlet-class>
-    </servlet>
-    
-    <servlet>
         <description>Servlet umożliwiający wgrywanie stron dokumentów</description>
         <servlet-name>documentPageUploadServlet</servlet-name>
         <servlet-class>org.digitalact.library.DocumentPageUploadServlet</servlet-class>
@@ -121,11 +115,6 @@
     <servlet-mapping>
         <servlet-name>mailTaskExecutionServlet</servlet-name>
         <url-pattern>/confirm</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>saveNotePropertiesServlet</servlet-name>
-        <url-pattern>/ajax/save-note</url-pattern>
     </servlet-mapping>
     
     <servlet-mapping>
