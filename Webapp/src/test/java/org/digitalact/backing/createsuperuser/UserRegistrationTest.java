@@ -17,7 +17,7 @@ import static org.testng.Assert.*;
 /**
  * Test weryfikujący możliwość rejestracji superużytkownika.
  */
-@ContextConfiguration(locations={"classpath:webapp-spring.xml", "classpath:spring-test-beans.xml"})
+@ContextConfiguration(locations={"classpath:webapp-spring.xml", "classpath:spring-datasource-test.xml", "classpath:spring-test-beans.xml"})
 public class UserRegistrationTest extends AbstractTransactionalTestNGSpringContextTests {
 
     @Inject

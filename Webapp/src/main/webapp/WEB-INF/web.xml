@@ -6,7 +6,8 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
-            classpath:webapp-spring.xml
+            classpath:webapp-spring.xml,
+            classpath:spring-datasource.xml
         </param-value>
     </context-param>
     <context-param>
