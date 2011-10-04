@@ -29,9 +29,6 @@ public class UserRegistrationCommandImpl implements UserRegistrationCommand {
 
     @Inject
     private PasswordEncoder passwordEncoder;
-    
-    @Inject
-    private MailTaskCreator confirmationService;
 
     @Override
     public void registerSuperUser(String name, String email, String password) throws UserAlreadyRegisteredException {
@@ -39,7 +36,6 @@ public class UserRegistrationCommandImpl implements UserRegistrationCommand {
         checkIfNoUserRegistered();
         Person person = constructSuperuser(name, email, password);
         personDao.save(person);
-        requestEmailConfirmation(email, person);
     }
 
     @Override
@@ -49,22 +45,6 @@ public class UserRegistrationCommandImpl implements UserRegistrationCommand {
         Person person = constructPerson(name, email, password);
         person.setRoles(createDefaultUserRoles());
         personDao.save(person);
-        requestEmailConfirmation(email, person);
-    }
-    
-    private void requestEmailConfirmation(String email, Person person) {//TODO: zmienic person na personId
-        
-        ConfirmAccountTask task = new ConfirmAccountTask(person.getPersonId());
-        ConfirmAccountEmailData emailData = prepareEmailData(person);
-        
-        confirmationService.createTask(email, person.getPersonId(), task, emailData);
-        
-    }
-
-    private ConfirmAccountEmailData prepareEmailData(Person person) {//TODO: zmienic person na personId
-        ConfirmAccountEmailData emailData = new ConfirmAccountEmailData();
-        emailData.setUsername(person.getName());
-        return emailData;
     }
 
     private Person constructSuperuser(String name, String email, String password) {
@@ -76,8 +56,9 @@ public class UserRegistrationCommandImpl implements UserRegistrationCommand {
     private Person constructPerson(String name, String email, String password) {
         Person person = new Person();
         person.setCreationTime(new Date());
+        person.setActivationTime(new Date());
         person.setEmail(email);
-        person.setEnabled(false);
+        person.setEnabled(true);
         person.setName(name);
         String encodedPassword = passwordEncoder.encodePassword(password, email);
         person.setPassword(encodedPassword);
